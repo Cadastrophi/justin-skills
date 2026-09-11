@@ -1,0 +1,4 @@
+interface:
+  display_name: "Junior Dev"
+  short_description: "Ship small changes through guarded draft PRs"
+  default_prompt: "Use $junior-dev to implement this change in a fresh worktree and open a safe draft PR into dev."
