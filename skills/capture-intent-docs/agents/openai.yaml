@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capture Intent Docs"
+  short_description: "Record concise product intent without implementation"
+  default_prompt: "Use $capture-intent-docs to record the agreed behavior from this discussion."
