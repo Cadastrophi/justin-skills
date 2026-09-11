@@ -26,6 +26,43 @@ Add `--global` to make them available across repositories on your machine. To in
 npx skills add Cadastrophi/justin-skills --list
 ```
 
+## Packs
+
+Instead of picking skills one at a time, install a named bundle. Definitions live in [`packs.json`](packs.json).
+
+| Pack | What's in it |
+| --- | --- |
+| `design` | Taste, brand systems, UI direction, and aesthetic vocabularies (apple-design, emil-design-eng, taste-skill, brandkit, shadcn-ui, awesome-design-md, pptx, and more). |
+| `animation` | Motion craft: animate, animate-expo, animation-vocabulary, review/improve/find-animation-opportunities, ask-sonner. |
+| `3d` | img2threejs (image → procedural Three.js). |
+| `swe` | junior-dev, impeccable, prototype, write-swift. |
+| `research` | capture-intent-docs, grill-with-docs, find-skills. |
+| `slides` | Curated slice for building a strong slide deck (pptx + taste + brand refs + shadcn-ui). |
+| `all` | Everything. |
+
+### Install a pack
+
+Clone the repo first (packs are driven by scripts in it), then run:
+
+```sh
+git clone https://github.com/Cadastrophi/justin-skills.git ~/justin-skills
+cd ~/justin-skills
+
+# macOS / Linux / Git Bash
+scripts/install-pack.sh design --global --yes
+scripts/install-pack.sh slides swe --global --yes   # union of two packs
+scripts/install-pack.sh --list                      # show every pack
+
+# Windows PowerShell
+./scripts/install-pack.ps1 design -Global -Yes
+./scripts/install-pack.ps1 slides swe -Global -Yes
+./scripts/install-pack.ps1 -List
+```
+
+The scripts resolve pack → skill list and shell out to `npx skills add Cadastrophi/justin-skills --skill …`. Drop `--global` / `-Global` to install into the current repo instead of your machine.
+
+`scripts/install-pack.sh` requires `jq`; the PowerShell version has no extra dependencies. Both need Node.js (for `npx`).
+
 ## Included skills
 
 | Skill | Purpose | Repository expectations |

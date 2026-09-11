@@ -1,0 +1,90 @@
+{
+  "$schema": "./packs.schema.json",
+  "description": "Named bundles of skills. Use scripts/install-pack.sh <pack> [--global] to install one, or pass multiple pack names for a union.",
+  "packs": {
+    "design": {
+      "title": "Design pack",
+      "summary": "Everything visual: taste, brand systems, UI direction, aesthetic vocabularies.",
+      "skills": [
+        "apple-design",
+        "emil-design-eng",
+        "taste-skill",
+        "taste-skill-v1",
+        "gpt-tasteskill",
+        "brandkit",
+        "brutalist-skill",
+        "minimalist-skill",
+        "soft-skill",
+        "stitch-skill",
+        "redesign-skill",
+        "output-skill",
+        "image-to-code-skill",
+        "imagegen-frontend-web",
+        "imagegen-frontend-mobile",
+        "shadcn-ui",
+        "pick-ui-library",
+        "awesome-design-md",
+        "pptx"
+      ]
+    },
+    "animation": {
+      "title": "Animation pack",
+      "summary": "Motion design: naming, opportunities, implementation, review, and toasts.",
+      "skills": [
+        "animate",
+        "animate-expo",
+        "animation-vocabulary",
+        "find-animation-opportunities",
+        "improve-animations",
+        "review-animations",
+        "ask-sonner"
+      ]
+    },
+    "3d": {
+      "title": "3D / graphics pack",
+      "summary": "Image-to-3D reconstruction and procedural Three.js models.",
+      "skills": [
+        "img2threejs"
+      ]
+    },
+    "swe": {
+      "title": "SWE pack",
+      "summary": "Engineering craft: judgment, prototyping, code review, native Swift.",
+      "skills": [
+        "junior-dev",
+        "impeccable",
+        "prototype",
+        "write-swift"
+      ]
+    },
+    "research": {
+      "title": "Research / discovery pack",
+      "summary": "Interviewing, capturing intent, and finding the right skills for a task.",
+      "skills": [
+        "capture-intent-docs",
+        "grill-with-docs",
+        "find-skills"
+      ]
+    },
+    "slides": {
+      "title": "Slides pack",
+      "summary": "Everything needed to build a strong slide deck: taste, brand refs, PPTX writer.",
+      "skills": [
+        "pptx",
+        "taste-skill",
+        "apple-design",
+        "emil-design-eng",
+        "brandkit",
+        "minimalist-skill",
+        "awesome-design-md",
+        "shadcn-ui",
+        "output-skill"
+      ]
+    },
+    "all": {
+      "title": "Everything",
+      "summary": "Install every skill in the collection.",
+      "skills": "*"
+    }
+  }
+}
