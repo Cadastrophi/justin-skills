@@ -1,89 +1,154 @@
 {
   "$schema": "./packs.schema.json",
-  "description": "Named bundles of skills. Use scripts/install-pack.sh <pack> [--global] to install one, or pass multiple pack names for a union.",
+  "description": "Install focused skill packs instead of flooding /skills. Packs may overlap; installers deduplicate their union.",
   "packs": {
-    "design": {
-      "title": "Design pack",
-      "summary": "Everything visual: taste, brand systems, UI direction, aesthetic vocabularies.",
+    "starter": {
+      "title": "Starter / routers",
+      "summary": "A small global set of standalone helpers that does not depend on specialist packs.",
+      "skills": ["caveman", "find-skills", "grill-me", "handoff", "wait-what"]
+    },
+    "emil": {
+      "title": "Emil Kowalski",
+      "summary": "Complete design-engineering and animation collection from emilkowalski/skills.",
       "skills": [
-        "apple-design",
-        "emil-design-eng",
-        "taste-skill",
-        "taste-skill-v1",
-        "gpt-tasteskill",
-        "brandkit",
-        "brutalist-skill",
-        "minimalist-skill",
-        "soft-skill",
-        "stitch-skill",
-        "redesign-skill",
-        "output-skill",
-        "image-to-code-skill",
-        "imagegen-frontend-web",
-        "imagegen-frontend-mobile",
-        "shadcn-ui",
-        "pick-ui-library",
-        "awesome-design-md",
-        "pptx"
+        "animate", "animate-expo", "animation-vocabulary", "apple-design",
+        "ask-sonner", "emil-design-eng", "emil-ui-prototype",
+        "find-animation-opportunities", "improve-animations", "pick-ui-library",
+        "review-animations", "write-swift"
+      ]
+    },
+    "matt-engineering": {
+      "title": "Matt Pocock: engineering",
+      "summary": "Stable engineering workflows from mattpocock/skills.",
+      "skills": [
+        "ask-matt", "code-review", "codebase-design", "diagnosing-bugs",
+        "domain-modeling", "grill-with-docs", "implement",
+        "improve-codebase-architecture", "prototype", "research",
+        "resolving-merge-conflicts", "setup-matt-pocock-skills", "tdd",
+        "to-spec", "to-tickets", "triage", "wayfinder", "wizard"
+      ]
+    },
+    "matt-productivity": {
+      "title": "Matt Pocock: productivity",
+      "summary": "Stable interviewing, handoff, teaching, and writing workflows.",
+      "skills": [
+        "grill-me", "grilling", "handoff", "teach", "to-questionnaire",
+        "wait-what", "writing-for-agents"
+      ]
+    },
+    "matt-misc": {
+      "title": "Matt Pocock: utilities",
+      "summary": "Stable setup and migration utilities.",
+      "skills": [
+        "git-guardrails-claude-code", "migrate-to-shoehorn",
+        "scaffold-exercises", "setup-pre-commit"
+      ]
+    },
+    "matt-experimental": {
+      "title": "Matt Pocock: in progress",
+      "summary": "Complete upstream in-progress set; install only when you want experimental workflows.",
+      "skills": [
+        "claude-handoff", "implement-spec", "loop-me", "retro",
+        "setup-ts-deep-modules", "writing-beats", "writing-fragments",
+        "writing-shape"
+      ]
+    },
+    "matt": {
+      "title": "Matt Pocock: complete",
+      "summary": "All stable and in-progress skills imported from mattpocock/skills.",
+      "skills": [
+        "ask-matt", "claude-handoff", "code-review", "codebase-design",
+        "diagnosing-bugs", "domain-modeling", "git-guardrails-claude-code",
+        "grill-me", "grill-with-docs", "grilling", "handoff", "implement",
+        "implement-spec", "improve-codebase-architecture", "loop-me",
+        "migrate-to-shoehorn", "prototype", "research",
+        "resolving-merge-conflicts", "retro", "scaffold-exercises",
+        "setup-matt-pocock-skills", "setup-pre-commit",
+        "setup-ts-deep-modules", "tdd", "teach", "to-questionnaire",
+        "to-spec", "to-tickets", "triage", "wait-what", "wayfinder",
+        "wizard", "writing-beats", "writing-for-agents",
+        "writing-fragments", "writing-shape"
+      ]
+    },
+    "caveman-core": {
+      "title": "Caveman: concise workflows",
+      "summary": "Communication, help, review, commit, compression, and delegation helpers.",
+      "skills": [
+        "cavecrew", "caveman", "caveman-commit", "caveman-compress",
+        "caveman-help", "caveman-review", "caveman-stats"
+      ]
+    },
+    "caveman-cloud": {
+      "title": "Caveman Cloud",
+      "summary": "Gateway setup, evidence review, discovery, optimization, and experiment operations.",
+      "skills": [
+        "caveman-discover", "caveman-evidence-review", "caveman-explore",
+        "caveman-learn", "caveman-manage", "caveman-optimize",
+        "caveman-setup"
+      ]
+    },
+    "code-discipline": {
+      "title": "Focused code-change discipline",
+      "summary": "Generic Caveman work patterns for diagnosis, small builds, migrations, refactors, and verification.",
+      "skills": [
+        "investigate-first", "lean-build", "migration", "safe-refactor",
+        "surgical-patch", "verify-and-stop"
+      ]
+    },
+    "caveman-all": {
+      "title": "Caveman: complete",
+      "summary": "Every skill from JuliusBrussee/caveman.",
+      "skills": [
+        "cavecrew", "caveman", "caveman-commit", "caveman-compress",
+        "caveman-discover", "caveman-evidence-review", "caveman-explore",
+        "caveman-help", "caveman-learn", "caveman-manage",
+        "caveman-optimize", "caveman-review", "caveman-setup",
+        "caveman-stats", "investigate-first", "lean-build", "migration",
+        "safe-refactor", "surgical-patch", "verify-and-stop"
+      ]
+    },
+    "design": {
+      "title": "Design toolkit",
+      "summary": "Personal visual-design, taste, image-to-code, and UI system skills.",
+      "skills": [
+        "awesome-design-md", "brandkit", "design-taste-frontend",
+        "full-output-enforcement", "gpt-taste", "high-end-visual-design",
+        "image-to-code", "imagegen-frontend-mobile", "imagegen-frontend-web",
+        "impeccable", "industrial-brutalist-ui", "minimalist-ui",
+        "redesign-existing-projects", "shadcn-ui", "stitch-design-taste"
       ]
     },
     "animation": {
-      "title": "Animation pack",
-      "summary": "Motion design: naming, opportunities, implementation, review, and toasts.",
+      "title": "Animation",
+      "summary": "Focused motion design and implementation from the Emil collection.",
       "skills": [
-        "animate",
-        "animate-expo",
-        "animation-vocabulary",
-        "find-animation-opportunities",
-        "improve-animations",
-        "review-animations",
-        "ask-sonner"
+        "animate", "animate-expo", "animation-vocabulary", "ask-sonner",
+        "find-animation-opportunities", "improve-animations",
+        "review-animations"
       ]
     },
-    "3d": {
-      "title": "3D / graphics pack",
+    "graphics": {
+      "title": "3D and graphics",
       "summary": "Image-to-3D reconstruction and procedural Three.js models.",
-      "skills": [
-        "img2threejs"
-      ]
-    },
-    "swe": {
-      "title": "SWE pack",
-      "summary": "Engineering craft: judgment, prototyping, code review, native Swift.",
-      "skills": [
-        "junior-dev",
-        "impeccable",
-        "prototype",
-        "write-swift"
-      ]
-    },
-    "research": {
-      "title": "Research / discovery pack",
-      "summary": "Interviewing, capturing intent, and finding the right skills for a task.",
-      "skills": [
-        "capture-intent-docs",
-        "grill-with-docs",
-        "find-skills"
-      ]
+      "skills": ["img2threejs"]
     },
     "slides": {
-      "title": "Slides pack",
-      "summary": "Everything needed to build a strong slide deck: taste, brand refs, PPTX writer.",
+      "title": "Slides",
+      "summary": "PowerPoint generation plus selected design guidance.",
       "skills": [
-        "pptx",
-        "taste-skill",
-        "apple-design",
-        "emil-design-eng",
-        "brandkit",
-        "minimalist-skill",
-        "awesome-design-md",
-        "shadcn-ui",
-        "output-skill"
+        "apple-design", "awesome-design-md", "brandkit",
+        "design-taste-frontend", "emil-design-eng", "minimalist-ui",
+        "pptx", "shadcn-ui"
       ]
+    },
+    "personal-workflows": {
+      "title": "Personal workflows",
+      "summary": "Locally curated documentation, discovery, and implementation helpers.",
+      "skills": ["capture-intent-docs", "find-skills", "junior-dev"]
     },
     "all": {
       "title": "Everything",
-      "summary": "Install every skill in the collection.",
+      "summary": "Every top-level skill in this repository. Expect a crowded /skills list.",
       "skills": "*"
     }
   }

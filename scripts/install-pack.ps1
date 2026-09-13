@@ -43,9 +43,9 @@ if (-not $Packs -or $Packs.Count -eq 0) {
 $skills = New-Object System.Collections.Generic.List[string]
 foreach ($name in $Packs) {
   if ($name -eq 'all') {
-    foreach ($p in $data.packs.PSObject.Properties) {
-      if ($p.Value.skills -is [array]) { $p.Value.skills | ForEach-Object { $null = $skills.Add($_) } }
-    }
+    Get-ChildItem (Join-Path $PSScriptRoot '..\skills') -Directory |
+      Where-Object { Test-Path (Join-Path $_.FullName 'SKILL.md') } |
+      ForEach-Object { $null = $skills.Add($_.Name) }
     continue
   }
   $pack = $data.packs.$name
@@ -53,7 +53,7 @@ foreach ($name in $Packs) {
   $pack.skills | ForEach-Object { $null = $skills.Add($_) }
 }
 
-$unique = $skills | Select-Object -Unique
+$unique = $skills | Sort-Object -Unique
 Write-Host ("Installing {0} skills from {1}:" -f $unique.Count, $RepoSlug)
 $unique | ForEach-Object { Write-Host "  - $_" }
 Write-Host ''

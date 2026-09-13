@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Justin Skills pack manifest",
+  "type": "object",
+  "required": ["description", "packs"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "packs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "summary", "skills"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "summary": { "type": "string", "minLength": 1 },
+          "skills": {
+            "oneOf": [
+              { "const": "*" },
+              {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "uniqueItems": true
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

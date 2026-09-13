@@ -49,28 +49,13 @@ done
 
 [[ ${#PACKS[@]} -gt 0 ]] || die "no pack names provided (try --list)"
 
-# Resolve packs → skill list (union, deduped). '*' means all.
-SKILLS_JSON=$(jq --argjson names "$(printf '%s\n' "${PACKS[@]}" | jq -R . | jq -s .)" '
-  ($names | map(. as $n |
-    (.packs // {})[$n] // ($packs_root.packs[$n]) // null
-  )) as $_ |
-  reduce ($names[]) as $n ([];
-    . + (if $n == "all" then
-           [.packs // {} | to_entries[].value.skills] | flatten
-         else
-           (.packs[$n] // (error("unknown pack: " + $n))).skills
-         end)
-  ) | unique
-' "$PACKS_JSON" 2>/dev/null || true)
-
-# Simpler resolver: shell out per pack, concatenate.
 SKILLS=()
 for pack in "${PACKS[@]}"; do
   if [[ "$pack" == "all" ]]; then
     while IFS= read -r s; do SKILLS+=("$s"); done < <(
-      jq -r '[.packs | to_entries[] | .value.skills] | flatten | unique[]?' "$PACKS_JSON"
+      find "$SCRIPT_DIR/../skills" -mindepth 2 -maxdepth 2 -type f -name SKILL.md \
+        -exec dirname {} \; | xargs -n1 basename | sort
     )
-    # 'all' also means every skill dir on disk; use the flat union as canonical.
     continue
   fi
   exists=$(jq --arg p "$pack" '.packs[$p]' "$PACKS_JSON")
