@@ -141,6 +141,11 @@
         "pptx", "shadcn-ui"
       ]
     },
+    "legal": {
+      "title": "Legal policy drafting and review",
+      "summary": "Privacy-policy drafting and structured legal-risk assessment. Verify current law and product facts; these workflows do not certify compliance.",
+      "skills": ["privacy-policy", "legal-risk-assessment"]
+    },
     "personal-workflows": {
       "title": "Personal workflows",
       "summary": "Locally curated documentation, discovery, and implementation helpers.",

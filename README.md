@@ -59,6 +59,7 @@ scripts deduplicate their union.
 | `animation` | Focused motion design subset. |
 | `graphics` | Image-to-3D and procedural Three.js. |
 | `slides` | PowerPoint plus selected design guidance. |
+| `legal` | Privacy-policy drafting and structured legal-risk assessment. |
 | `personal-workflows` | Locally curated documentation, discovery, and implementation helpers. |
 | `all` | Every skill; expect a crowded `/skills` list. |
 
