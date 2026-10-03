@@ -6,30 +6,39 @@ stays useful.
 
 ## Recommended setup
 
-Keep a small router pack global, then install specialist packs per project:
+Run one command from the checkout to update the repository and installed skills:
 
 ```sh
-# Once, globally; repeat after git pull to add or update selected skills
-python scripts/sync-local-skills.py starter --apply
+# From PowerShell, after cloning once; pull and sync all repo skills
+.\start.ps1
 
-# Inside a frontend project
-./scripts/install-pack.sh emil design animation --yes
+# Or from macOS / Linux
+./start.sh
 
-# Inside an application/codebase project
-./scripts/install-pack.sh matt-engineering code-discipline --yes
 ```
 
-On Windows PowerShell, use `./scripts/install-pack.ps1` and the `-Yes`
-switch for project installs. The agent's `/skills` view reflects installed
-paths, not the visual layout of the source repository.
+The no-argument start command syncs every skill in this repo, so `/skills` can
+be crowded. Pass pack names to install a smaller set, such as
+`.\start.ps1 starter emil` or `./start.sh starter emil`. For skills needed
+only in one project, use `scripts/install-pack.ps1` on Windows or
+`scripts/install-pack.sh` on macOS/Linux from that project. The agent's
+`/skills` view reflects installed paths, not the visual layout of the source
+repository.
 
 ## One catalog across devices and agents
 
 Treat this Git repository and `packs.json` as the catalog for the skills you
 choose to manage. Clone it **once per device outside any scanned skills
 directory**. A clone is only a source checkout, so it does not add entries to
-`/skills`. Later, `git pull` transfers Git's changes into that same checkout;
-do not clone again to update it.
+`/skills`. Run `.\start.ps1` on Windows or `./start.sh` on macOS/Linux
+from that checkout. The command runs `git pull --ff-only` and then the
+duplicate-aware sync. Git transfers changes into the existing checkout; do
+not clone again to update it.
+
+Use `--preview` to pull and inspect changes without installing, or
+`--no-pull` to sync the current checkout while offline. Both commands accept
+pack names. Use `--antigravity` only when Antigravity does not already scan
+`~/.agents/skills`.
 
 For a preview that does not change your configuration:
 
