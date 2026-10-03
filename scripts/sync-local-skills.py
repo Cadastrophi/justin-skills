@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Install selected repo packs into agent skill folders without overwriting files.
+"""Sync selected skill packs from this checkout into one shared local copy.
 
-Preview is the default. Re-run after pulling the repo on each device.
+Preview is the default. Re-run after ``git pull`` on each device.
 """
 
 import argparse
 import hashlib
 import json
+import os
 import shutil
+import subprocess
 import uuid
 from pathlib import Path
 
@@ -20,11 +22,112 @@ def tree_hash(directory: Path) -> str:
     return digest.hexdigest()
 
 
+def is_link(path: Path) -> bool:
+    return path.is_symlink() or (hasattr(path, "is_junction") and path.is_junction())
+
+
+def exists(path: Path) -> bool:
+    return path.exists() or is_link(path)
+
+
+def same_link(path: Path, target: Path) -> bool:
+    return is_link(path) and path.resolve() == target.resolve()
+
+
+def make_directory_link(path: Path, target: Path) -> None:
+    """Use a junction on Windows so Claude can follow it without developer mode."""
+    if os.name == "nt":
+        environment = os.environ.copy()
+        environment["JUSTIN_SKILLS_LINK_PATH"] = str(path)
+        environment["JUSTIN_SKILLS_LINK_TARGET"] = str(target)
+        subprocess.run(
+            [
+                "powershell", "-NoProfile", "-NonInteractive", "-Command",
+                "$ErrorActionPreference = 'Stop'; "
+                "New-Item -ItemType Junction -Path $env:JUSTIN_SKILLS_LINK_PATH "
+                "-Target $env:JUSTIN_SKILLS_LINK_TARGET | Out-Null",
+            ],
+            env=environment,
+            check=True,
+        )
+    else:
+        path.symlink_to(target, target_is_directory=True)
+
+
+def backup_path(home: Path, target: str, name: str) -> Path:
+    return home / ".justin-skills" / "backups" / target / f"{name}-{uuid.uuid4().hex[:8]}"
+
+
+def sync_shared(source: Path, destination: Path, codex_copy: Path, managed: dict,
+                home: Path, name: str, apply: bool) -> tuple[str, bool]:
+    source_hash = tree_hash(source)
+    key = f"agents/{name}"
+    if exists(destination):
+        if is_link(destination):
+            return "CONFLICT (shared path is a link)", True
+        dest_hash = tree_hash(destination) if destination.is_dir() else None
+        if dest_hash == source_hash:
+            if apply:
+                managed[key] = source_hash
+            return "current", False
+        if managed.get(key) != dest_hash:
+            return "CONFLICT (local content differs)", True
+        if not apply:
+            return "would update managed copy", False
+        backup = backup_path(home, "agents", name)
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        staged = destination.parent / f".justin-skills-stage-{uuid.uuid4().hex}"
+        shutil.copytree(source, staged)
+        destination.replace(backup)
+        try:
+            staged.replace(destination)
+        except Exception:
+            backup.replace(destination)
+            raise
+        managed[key] = source_hash
+        return f"updated (backup: {backup})", False
+    if exists(codex_copy):
+        return "CONFLICT (same skill already in .codex/skills)", True
+    if not apply:
+        return "would copy", False
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(source, destination)
+    managed[key] = source_hash
+    return "copied", False
+
+
+def sync_link(shared: Path, destination: Path, home: Path, target: str,
+              name: str, apply: bool) -> tuple[str, bool]:
+    if same_link(destination, shared):
+        return "linked", False
+    if exists(destination):
+        if is_link(destination) or not destination.is_dir():
+            return "CONFLICT (different link or file exists)", True
+        if tree_hash(destination) != tree_hash(shared):
+            return "CONFLICT (local content differs)", True
+        if not apply:
+            return "would link identical copy", False
+        backup = backup_path(home, target, name)
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        destination.replace(backup)
+        try:
+            make_directory_link(destination, shared)
+        except Exception:
+            backup.replace(destination)
+            raise
+        return f"linked (old copy: {backup})", False
+    if not apply:
+        return "would link", False
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    make_directory_link(destination, shared)
+    return "linked", False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("packs", nargs="+", help="Pack names from packs.json")
     parser.add_argument("--target", choices=("agents", "claude", "antigravity"), action="append")
-    parser.add_argument("--apply", action="store_true", help="Copy missing skills (never overwrite)")
+    parser.add_argument("--apply", action="store_true", help="Apply the previewed copies, updates, and links")
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parent.parent)
     parser.add_argument("--home", type=Path, default=Path.home(), help="Home directory containing agent configs")
     args = parser.parse_args()
@@ -48,55 +151,35 @@ def main() -> int:
     }
     state_file = home / ".justin-skills" / "managed.json"
     managed = json.loads(state_file.read_text(encoding="utf-8")) if state_file.is_file() else {}
-    targets = args.target or ["agents", "claude"]
+    targets = set(args.target or ["agents", "claude"])
+    # Every requested agent reads the one shared installation. Other roots link to it.
+    targets.add("agents")
     conflicts = 0
-    for target in targets:
-        root = destinations[target]
-        for name in sorted(names):
-            source = args.repo / "skills" / name
-            destination = root / name
-            if not (source / "SKILL.md").is_file():
-                parser.error(f"missing source skill: {source}")
-            source_hash = tree_hash(source)
-            key = f"{target}/{name}"
-            if destination.exists() or destination.is_symlink():
-                dest_hash = tree_hash(destination) if destination.is_dir() else None
-                if dest_hash == source_hash:
-                    state = "current"
-                    if args.apply and not destination.is_symlink():
-                        managed[key] = source_hash
-                elif managed.get(key) == dest_hash and not destination.is_symlink():
-                    if args.apply:
-                        backup = home / ".justin-skills" / "backups" / target / f"{name}-{uuid.uuid4().hex[:8]}"
-                        backup.parent.mkdir(parents=True, exist_ok=True)
-                        staged = root / f".justin-skills-stage-{uuid.uuid4().hex}"
-                        shutil.copytree(source, staged)
-                        destination.replace(backup)
-                        try:
-                            staged.replace(destination)
-                        except Exception:
-                            backup.replace(destination)
-                            raise
-                        managed[key] = source_hash
-                        state = f"updated (backup: {backup})"
-                    else:
-                        state = "would update managed copy"
-                else:
-                    state = "CONFLICT"
-                    conflicts += 1
-            elif args.apply:
-                root.mkdir(parents=True, exist_ok=True)
-                shutil.copytree(source, destination)
-                managed[key] = source_hash
-                state = "copied"
-            else:
-                state = "would copy"
+    for name in sorted(names):
+        source = args.repo / "skills" / name
+        if not (source / "SKILL.md").is_file():
+            parser.error(f"missing source skill: {source}")
+        shared = destinations["agents"] / name
+        state, conflict = sync_shared(source, shared, home / ".codex" / "skills" / name,
+                                      managed, home, name, args.apply)
+        print(f"{'agents':11} {name:32} {state}")
+        conflicts += conflict
+        if conflict:
+            continue
+        for target in ("claude", "antigravity"):
+            if target not in targets:
+                continue
+            # In preview, a missing shared copy is represented by its source.
+            link_source = shared if shared.exists() else source
+            state, conflict = sync_link(link_source, destinations[target] / name,
+                                        home, target, name, args.apply)
             print(f"{target:11} {name:32} {state}")
+            conflicts += conflict
     if args.apply:
         state_file.parent.mkdir(parents=True, exist_ok=True)
         state_file.write_text(json.dumps(managed, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if conflicts:
-        print(f"{conflicts} existing directories differ; review them before replacing anything.")
+        print(f"{conflicts} existing skill paths need review; nothing at those paths was replaced.")
     return 2 if conflicts else 0
 
 
