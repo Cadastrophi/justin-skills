@@ -61,6 +61,11 @@ Keep built-in and plugin-provided skills in their own tool or plugin. A matching
 name in this catalog does not mean its installed copy is safe to replace.
 Use the audit's hashes to review such collisions first.
 
+The [skill catalog](docs/skill-catalog.md) and [CSV version](docs/skill-catalog.csv)
+list the distinct skills found during the 3 October 2026 local inventory, with
+one-line usage guidance and suggested configuration scope. They are a dated
+snapshot; re-audit a device before making cleanup decisions from it.
+
 ## Install individual skills
 
 Use the [Skills CLI](https://github.com/vercel-labs/skills) from the repository
