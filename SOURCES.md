@@ -25,6 +25,7 @@ Upstream licenses are preserved in `licenses/`.
 
 ## Other retained sources
 
+- `justin-design`: [Cadastrophi/justin-design-skill](https://github.com/Cadastrophi/justin-design-skill), revision `76cee9dd85e4dae277f1085827018d43bc69cf26`; copied with its `agents/openai.yaml` and `references/prompts.md` files. The imported revision has no license file.
 - `find-skills`: [vercel-labs/skills](https://github.com/vercel-labs/skills)
 - `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
 - `pptx`: [anthropics/skills](https://github.com/anthropics/skills)

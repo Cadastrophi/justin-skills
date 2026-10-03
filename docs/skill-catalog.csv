@@ -234,6 +234,7 @@ java-coding-standards,ECC plugin,On demand / project,Java coding standards for S
 jira-integration,ECC plugin,On demand / project,"Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues."
 jpa-patterns,ECC plugin,On demand / project,"JPA/Hibernate patterns for entity design. Use when designing JPA entities or relationships, or when a Hibernate query, transaction, or N+1 problem needs fixing."
 junior-dev,Justin repo: personal-workflows,Project pack,"Implement small, well-tested repository changes through a guarded junior-developer workflow."
+justin-design,Justin repo: design,Project pack,"Design, build, or review production frontend interfaces with Apple-like clarity, restraint, material depth, and fluid interaction while avoiding generic AI-looking layouts."
 knowledge-ops,ECC plugin,On demand / project,"Knowledge base management. Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems."
 kotlin-coroutines-flows,ECC plugin,On demand / project,"Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency. Use when writing coroutines or Flow code on Android or KMP, or debugging cancellation and concurrency."
 kotlin-exposed-patterns,ECC plugin,On demand / project,"JetBrains Exposed ORM patterns including DSL queries. Use when working with the Exposed ORM — DSL or DAO queries, transactions, pooling, or migrations."

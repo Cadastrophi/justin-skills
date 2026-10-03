@@ -1,0 +1,4 @@
+interface:
+  display_name: "Justin Design"
+  short_description: "Apple-like, clean, distinctive frontend craft"
+  default_prompt: "Use $justin-design to design or refine this frontend with clean, distinctive, Apple-like craft."
