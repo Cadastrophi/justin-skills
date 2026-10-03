@@ -9,8 +9,8 @@ stays useful.
 Keep a small router pack global, then install specialist packs per project:
 
 ```sh
-# Once, globally
-./scripts/install-pack.sh starter --global --yes
+# Once, globally; repeat after git pull to add or update selected skills
+python scripts/sync-local-skills.py starter --apply
 
 # Inside a frontend project
 ./scripts/install-pack.sh emil design animation --yes
@@ -19,43 +19,55 @@ Keep a small router pack global, then install specialist packs per project:
 ./scripts/install-pack.sh matt-engineering code-discipline --yes
 ```
 
-On Windows PowerShell, use `./scripts/install-pack.ps1` and the `-Global` and
-`-Yes` switches. This is more effective than nesting skill directories: the
-agent's `/skills` view reflects what is installed, not the visual layout of the
-source repository.
+On Windows PowerShell, use `./scripts/install-pack.ps1` and the `-Yes`
+switch for project installs. The agent's `/skills` view reflects installed
+paths, not the visual layout of the source repository.
 
 ## One catalog across devices and agents
 
 Treat this Git repository and `packs.json` as the catalog for the skills you
-choose to manage. Clone or pull it on each device, then run the same pack
-selection there. The repository is the source; installed folders are copies.
+choose to manage. Clone it **once per device outside any scanned skills
+directory**. A clone is only a source checkout, so it does not add entries to
+`/skills`. Later, `git pull` transfers Git's changes into that same checkout;
+do not clone again to update it.
 
 For a preview that does not change your configuration:
 
 ```sh
 python scripts/audit-local-skills.py > skill-inventory.json
-python scripts/sync-local-skills.py starter --target agents --target claude
+python scripts/sync-local-skills.py starter
 ```
 
 To install missing skills from this exact checkout:
 
 ```sh
-python scripts/sync-local-skills.py starter --target agents --target claude --apply
+git pull
+python scripts/sync-local-skills.py starter --apply
 ```
 
-The sync script reports `CONFLICT` for an existing skill it does not manage or
-one changed locally. It updates its own unchanged copies after `git pull`,
-keeping the prior version under `~/.justin-skills/backups/`. It accepts multiple
-pack names and deduplicates their union. Python 3 is required.
+The sync script installs one real copy in `~/.agents/skills` and links
+`~/.claude/skills` to that copy (a junction on Windows). Repeated runs skip
+unchanged skills, install newly selected skills, and update previously managed
+copies when the repository changes. It keeps replaced versions under
+`~/.justin-skills/backups/`. An identical existing Claude copy is backed up
+and converted to a link; a differing copy reports `CONFLICT` for review.
+Existing same-name skills in `~/.codex/skills` block a new shared install so
+Codex does not discover both. The script accepts multiple pack names and
+deduplicates their union. Python 3 is required.
 
 `~/.agents/skills` is the shared global target for Codex and other agents that
 read the Agent Skills directory. Claude Code also uses `~/.claude/skills`.
-Antigravity's global config target can be included with `--target antigravity`
-(`~/.gemini/config/skills`). Before adding the same skill to both `agents` and
-`antigravity`, check whether your installed Antigravity version already reads
-`~/.agents/skills`; otherwise it may show the name twice. Conductor and Paseo
-run underlying agents, so install to those agents' skill locations on each host.
-Paseo's own orchestration skills are managed in Paseo settings.
+Only add `--target antigravity` if that installation does not already read
+`~/.agents/skills`; it creates a link in `~/.gemini/config/skills`. If
+Antigravity scans both paths, even a link can appear twice in its menu.
+Conductor and Paseo run underlying agents, so use the underlying agent's
+skill location on each host. Paseo's own orchestration skills are managed in
+Paseo settings.
+
+Use this sync command as the single global installation method for these
+skills. Running `npx skills add` or the pack installer globally as well can
+create another discovered path for the same skill. Project-specific installs
+remain useful when they are intentionally scoped to one project.
 
 Keep built-in and plugin-provided skills in their own tool or plugin. A matching
 name in this catalog does not mean its installed copy is safe to replace.
