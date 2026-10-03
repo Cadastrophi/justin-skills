@@ -2,9 +2,9 @@
 
 One row per distinct skill-folder name found in the Justin repository, user-level agent directories, and agent plugin or built-in caches on this computer. Same-named copies are listed once; the separate inventory records paths and content differences. Cached/built-in skills may be available only in their owning tool, and should not be copied into the shared catalog automatically.
 
-**489 distinct names.** Configure the Justin repo's `starter` pack globally only if you want its five helpers everywhere; use specialist packs per project. ECC, Paseo, and bundled skills follow their own installer or host. The usage prompts below condense each skill's own description; inspect its `SKILL.md` before first configuration.
+**490 distinct names.** Configure the Justin repo's `starter` pack globally only if you want its five helpers everywhere; use specialist packs per project. ECC, Paseo, and bundled skills follow their own installer or host. The usage prompts below condense each skill's own description; inspect its `SKILL.md` before first configuration.
 
-## Justin repository (91)
+## Justin repository (92)
 
 | Skill | Source / configure | Use it when |
 | --- | --- | --- |
@@ -61,6 +61,7 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `industrial-brutalist-ui` | Justin repo: design; Project pack | Use for raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. |
 | `investigate-first` | Justin repo: code-discipline; Project pack | Diagnose ambiguous failures before editing. |
 | `junior-dev` | Justin repo: personal-workflows; Project pack | Implement small, well-tested repository changes through a guarded junior-developer workflow. |
+| `justin-design` | Justin repo: design; Project pack | Design, build, or review production frontend interfaces with Apple-like clarity, restraint, material depth, and fluid interaction while avoiding generic AI-looking layouts. |
 | `lean-build` | Justin repo: code-discipline; Project pack | Build feature work with high overbuilding risk. |
 | `legal-risk-assessment` | Justin repo: legal; Project pack | Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter…. |
 | `loop-me` | Justin repo: matt-experimental; Project pack | Grill me about specs for the workflows I want to build, within this workspace. |

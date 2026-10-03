@@ -1,8 +1,8 @@
 # Justin Skills
 
-Personal agent skills plus complete mirrored collections from Emil Kowalski,
-Matt Pocock, and Caveman. Install only the focused packs you need so `/skills`
-stays useful.
+Personal agent skills, including a locally authored Justin Design skill, plus
+complete mirrored collections from Emil Kowalski, Matt Pocock, and Caveman.
+Install only the focused packs you need so `/skills` stays useful.
 
 ## Recommended setup
 
@@ -119,7 +119,7 @@ scripts deduplicate their union.
 | `caveman-cloud` | Caveman gateway, evidence, and optimization workflows. |
 | `code-discipline` | Generic focused-build, diagnosis, migration, refactor, and verification patterns. |
 | `caveman-all` | Complete Caveman collection. |
-| `design` | Personal visual design and frontend taste toolkit. |
+| `design` | Personal visual design, frontend taste, and premium interface craft. |
 | `animation` | Focused motion design subset. |
 | `graphics` | Image-to-3D and procedural Three.js. |
 | `slides` | PowerPoint plus selected design guidance. |
