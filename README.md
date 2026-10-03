@@ -24,6 +24,43 @@ On Windows PowerShell, use `./scripts/install-pack.ps1` and the `-Global` and
 agent's `/skills` view reflects what is installed, not the visual layout of the
 source repository.
 
+## One catalog across devices and agents
+
+Treat this Git repository and `packs.json` as the catalog for the skills you
+choose to manage. Clone or pull it on each device, then run the same pack
+selection there. The repository is the source; installed folders are copies.
+
+For a preview that does not change your configuration:
+
+```sh
+python scripts/audit-local-skills.py > skill-inventory.json
+python scripts/sync-local-skills.py starter --target agents --target claude
+```
+
+To install missing skills from this exact checkout:
+
+```sh
+python scripts/sync-local-skills.py starter --target agents --target claude --apply
+```
+
+The sync script reports `CONFLICT` for an existing skill it does not manage or
+one changed locally. It updates its own unchanged copies after `git pull`,
+keeping the prior version under `~/.justin-skills/backups/`. It accepts multiple
+pack names and deduplicates their union. Python 3 is required.
+
+`~/.agents/skills` is the shared global target for Codex and other agents that
+read the Agent Skills directory. Claude Code also uses `~/.claude/skills`.
+Antigravity's global config target can be included with `--target antigravity`
+(`~/.gemini/config/skills`). Before adding the same skill to both `agents` and
+`antigravity`, check whether your installed Antigravity version already reads
+`~/.agents/skills`; otherwise it may show the name twice. Conductor and Paseo
+run underlying agents, so install to those agents' skill locations on each host.
+Paseo's own orchestration skills are managed in Paseo settings.
+
+Keep built-in and plugin-provided skills in their own tool or plugin. A matching
+name in this catalog does not mean its installed copy is safe to replace.
+Use the audit's hashes to review such collisions first.
+
 ## Install individual skills
 
 Use the [Skills CLI](https://github.com/vercel-labs/skills) from the repository
