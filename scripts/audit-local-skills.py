@@ -26,7 +26,7 @@ def skills_at(root: Path) -> dict[str, dict[str, str]]:
             "path": str(directory),
             "sha256": hashlib.sha256(skill_file.read_bytes()).hexdigest(),
             "tree_sha256": tree_hash.hexdigest(),
-            "link": directory.is_symlink(),
+            "link": directory.is_symlink() or (hasattr(directory, "is_junction") and directory.is_junction()),
         }
     return found
 
