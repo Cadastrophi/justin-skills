@@ -58,7 +58,21 @@ def backup_path(home: Path, target: str, name: str) -> Path:
     return home / ".justin-skills" / "backups" / target / f"{name}-{uuid.uuid4().hex[:8]}"
 
 
-def sync_shared(source: Path, destination: Path, codex_copy: Path, managed: dict,
+def discovered_elsewhere(home: Path) -> dict[str, list[Path]]:
+    """Find skill folders outside the canonical top-level shared directory."""
+    found: dict[str, list[Path]] = {}
+    for root in (home / ".agents" / "skills", home / ".codex" / "skills"):
+        if not root.is_dir():
+            continue
+        for skill_file in root.rglob("SKILL.md"):
+            folder = skill_file.parent
+            if folder == root / folder.name and root.name == "skills" and root.parent.name == ".agents":
+                continue
+            found.setdefault(folder.name, []).append(folder)
+    return found
+
+
+def sync_shared(source: Path, destination: Path, other_paths: dict[str, list[Path]], managed: dict,
                 home: Path, name: str, apply: bool) -> tuple[str, bool]:
     source_hash = tree_hash(source)
     key = f"agents/{name}"
@@ -86,8 +100,8 @@ def sync_shared(source: Path, destination: Path, codex_copy: Path, managed: dict
             raise
         managed[key] = source_hash
         return f"updated (backup: {backup})", False
-    if exists(codex_copy):
-        return "CONFLICT (same skill already in .codex/skills)", True
+    if name in other_paths:
+        return f"CONFLICT (same skill already at {other_paths[name][0]})", True
     if not apply:
         return "would copy", False
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -151,6 +165,7 @@ def main() -> int:
     }
     state_file = home / ".justin-skills" / "managed.json"
     managed = json.loads(state_file.read_text(encoding="utf-8")) if state_file.is_file() else {}
+    other_paths = discovered_elsewhere(home)
     targets = set(args.target or ["agents", "claude"])
     # Every requested agent reads the one shared installation. Other roots link to it.
     targets.add("agents")
@@ -160,7 +175,7 @@ def main() -> int:
         if not (source / "SKILL.md").is_file():
             parser.error(f"missing source skill: {source}")
         shared = destinations["agents"] / name
-        state, conflict = sync_shared(source, shared, home / ".codex" / "skills" / name,
+        state, conflict = sync_shared(source, shared, other_paths,
                                       managed, home, name, args.apply)
         print(f"{'agents':11} {name:32} {state}")
         conflicts += conflict

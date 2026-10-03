@@ -51,8 +51,9 @@ unchanged skills, install newly selected skills, and update previously managed
 copies when the repository changes. It keeps replaced versions under
 `~/.justin-skills/backups/`. An identical existing Claude copy is backed up
 and converted to a link; a differing copy reports `CONFLICT` for review.
-Existing same-name skills in `~/.codex/skills` block a new shared install so
-Codex does not discover both. The script accepts multiple pack names and
+Existing same-name skills in `~/.codex/skills` or nested
+`~/.agents/skills` folders block a new shared install so Codex does not
+discover both. The script accepts multiple pack names and
 deduplicates their union. Python 3 is required.
 
 `~/.agents/skills` is the shared global target for Codex and other agents that
