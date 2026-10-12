@@ -42,3 +42,8 @@ Selected skills, not complete collections:
 | `legal-risk-assessment` | [anthropics/knowledge-work-plugins: legal/skills/legal-risk-assessment](https://github.com/anthropics/knowledge-work-plugins/tree/da38ec1ee89d41e5380e652a97382695003396e7/legal/skills/legal-risk-assessment) | `da38ec1ee89d41e5380e652a97382695003396e7` | Apache-2.0, `licenses/anthropic-knowledge-work-plugins-LICENSE` |
 
 Imported unchanged into the `legal` pack. These are drafting/review aids, not legal authority. In particular, the privacy template's shorthand about GDPR consent and CCPA applicability must be checked against current primary sources and the user's actual circumstances; do not treat consent as the only lawful basis or assume every California-facing business is CCPA-covered. Keep internal review markers out of final customer-facing copy and do not invent missing operational commitments.
+
+## Writing and editing imports
+
+- `humanizer`: [blader/humanizer](https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md), revision `225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/humanizer-LICENSE`.
+- `unslop`: [cursor/plugins](https://github.com/cursor/plugins/blob/1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def/pstack/skills/unslop/SKILL.md), revision `1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/unslop-LICENSE`.

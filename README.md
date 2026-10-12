@@ -171,3 +171,7 @@ The three complete imported collections and their pinned revisions are listed
 in [`SOURCES.md`](SOURCES.md). Other retained skills preserve the original
 sources previously documented by this repository, including Vercel Labs,
 Impeccable, Anthropic, and local project-specific skills.
+
+## Writing pack
+
+Run `.\start.ps1 writing` or `./start.sh writing` to sync Humanizer and Pstack unslop. Both edit prose while preserving its meaning. Invoke `/humanizer` or `/unslop` when you want a writing pass.

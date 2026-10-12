@@ -151,6 +151,11 @@
       "summary": "Locally curated documentation, discovery, and implementation helpers.",
       "skills": ["capture-intent-docs", "find-skills", "junior-dev"]
     },
+    "writing": {
+      "title": "Writing and editing",
+      "summary": "Humanizer and Pstack unslop for clear prose without AI writing patterns.",
+      "skills": ["humanizer", "unslop"]
+    },
     "all": {
       "title": "Everything",
       "summary": "Every top-level skill in this repository. Expect a crowded /skills list.",
