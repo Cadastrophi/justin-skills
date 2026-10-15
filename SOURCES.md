@@ -47,3 +47,7 @@ Imported unchanged into the `legal` pack. These are drafting/review aids, not le
 
 - `humanizer`: [blader/humanizer](https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md), revision `225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/humanizer-LICENSE`.
 - `unslop`: [cursor/plugins](https://github.com/cursor/plugins/blob/1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def/pstack/skills/unslop/SKILL.md), revision `1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/unslop-LICENSE`.
+
+## Security imports
+
+- `security-audit`: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill/tree/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/skills/security-audit), revision `c1c8a8c1471069fb0e188eeaff69b8e8db6564a8`. Imported unchanged with its reference files and validators. MIT, `licenses/cloudflare-security-audit-skill-LICENSE`.

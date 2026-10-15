@@ -124,6 +124,7 @@ scripts deduplicate their union.
 | `graphics` | Image-to-3D and procedural Three.js. |
 | `slides` | PowerPoint plus selected design guidance. |
 | `legal` | Privacy-policy drafting and structured legal-risk assessment. |
+| `security` | Cloudflare's security audit and vulnerability review workflow. |
 | `personal-workflows` | Locally curated documentation, discovery, and implementation helpers. |
 | `all` | Every skill; expect a crowded `/skills` list. |
 
@@ -175,3 +176,7 @@ Impeccable, Anthropic, and local project-specific skills.
 ## Writing pack
 
 Run `.\start.ps1 writing` or `./start.sh writing` to sync Humanizer and Pstack unslop. Both edit prose while preserving its meaning. Invoke `/humanizer` or `/unslop` when you want a writing pass.
+
+## Security pack
+
+Run `.\start.ps1 security` or `./start.sh security` to sync Cloudflare's `security-audit` skill. It gives focused security guidance by default and runs its full six-phase audit, with report files, only when you ask for a complete audit or pen test.

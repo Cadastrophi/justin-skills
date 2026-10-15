@@ -156,6 +156,11 @@
       "summary": "Humanizer and Pstack unslop for clear prose without AI writing patterns.",
       "skills": ["humanizer", "unslop"]
     },
+    "security": {
+      "title": "Security",
+      "summary": "Cloudflare's source-first security audit and vulnerability review workflow.",
+      "skills": ["security-audit"]
+    },
     "all": {
       "title": "Everything",
       "summary": "Every top-level skill in this repository. Expect a crowded /skills list.",
