@@ -6,8 +6,8 @@ stability boundaries without requiring every skill to be installed.
 
 | Source | Imported revision | Local pack |
 | --- | --- | --- |
-| [emilkowalski/skills](https://github.com/emilkowalski/skills) | `d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7` | `emil` |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | `3cca18b368ae95cdbdebbff572ccafa662551015` | `matt` |
+| [emilkowalski/skills](https://github.com/emilkowalski/skills) | `2d228630ba1446365f614a108cb8252f1feda202` | `emil` |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | `5beb35b040e3de97e54fa9e386d7e42d15c295c2` | `matt` |
 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | `15581d14007fd01fb3f132016741962f34936ca2` | `caveman-all` |
 
 ## Collision policy
@@ -27,7 +27,7 @@ Upstream licenses are preserved in `licenses/`.
 
 - `justin-design`: [Cadastrophi/justin-design-skill](https://github.com/Cadastrophi/justin-design-skill), revision `76cee9dd85e4dae277f1085827018d43bc69cf26`; copied with its `agents/openai.yaml` and `references/prompts.md` files. The imported revision has no license file.
 - `find-skills`: [vercel-labs/skills](https://github.com/vercel-labs/skills)
-- `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
+- `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable/tree/46b822f7dda9f7dba799a9c7776fdc19b3a93559/.agents/skills/impeccable), revision `46b822f7dda9f7dba799a9c7776fdc19b3a93559` (v4.7.0), copied from the `.agents/skills/impeccable` build
 - `pptx`: [anthropics/skills](https://github.com/anthropics/skills)
 - `junior-dev`: [Cadastrophi/junior-dev](https://github.com/Cadastrophi/junior-dev), revision `28f483be150594701e73232651cf604291e55b53`
 - `capture-intent-docs`: Vellum's `.agents/skills/capture-intent-docs`, revision `9ceed7a`
@@ -45,7 +45,7 @@ Imported unchanged into the `legal` pack. These are drafting/review aids, not le
 
 ## Writing and editing imports
 
-- `humanizer`: [blader/humanizer](https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md), revision `225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/humanizer-LICENSE`.
+- `humanizer`: [blader/humanizer](https://github.com/blader/humanizer/tree/8c307f367c91bd974002f10f2be2965d642c13df), revision `8c307f367c91bd974002f10f2be2965d642c13df`. Imported unchanged as a standalone skill with its `agents/` and `scripts/` folders. Upstream licence preserved in `licenses/humanizer-LICENSE`.
 - `unslop`: [cursor/plugins](https://github.com/cursor/plugins/blob/1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def/pstack/skills/unslop/SKILL.md), revision `1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def`. Imported unchanged as a standalone skill. Upstream licence preserved in `licenses/unslop-LICENSE`.
 
 ## Security imports
