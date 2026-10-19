@@ -1,0 +1,7 @@
+interface:
+  display_name: "JWW Writing Style"
+  short_description: "Write in Justin's direct, conversational voice"
+  icon_small: "./assets/writing-icon.png"
+  icon_large: "./assets/writing-icon.png"
+  brand_color: "#355C7D"
+  default_prompt: "Use $jww-writing-style to draft this message in my voice."

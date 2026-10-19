@@ -161,6 +161,14 @@
       "summary": "Cloudflare's source-first security audit and vulnerability review workflow.",
       "skills": ["security-audit"]
     },
+    "jww": {
+      "title": "Justin Williams",
+      "summary": "Investigation, git workflow, handoff, validation, Swift style, and writing conventions from justin/jww-skills.",
+      "skills": [
+        "jww-bounded-investigation", "jww-git-workflow", "jww-handoff",
+        "jww-repository-validation", "jww-swift-style", "jww-writing-style"
+      ]
+    },
     "all": {
       "title": "Everything",
       "summary": "Every top-level skill in this repository. Expect a crowded /skills list.",

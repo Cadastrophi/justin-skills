@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Validation"
+  short_description: "Select and report relevant repository checks"
+  default_prompt: "Use $jww-repository-validation to validate this change proportionately."

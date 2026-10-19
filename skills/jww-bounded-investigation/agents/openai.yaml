@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bounded Investigation"
+  short_description: "Investigate unfamiliar code with evidence and bounded search."
+  default_prompt: "Use $jww-bounded-investigation to investigate this request without editing files."

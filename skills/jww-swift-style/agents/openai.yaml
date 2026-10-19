@@ -1,0 +1,7 @@
+interface:
+  display_name: "JWW Swift Style"
+  short_description: "Apply JWW personal Swift conventions"
+  icon_small: "./assets/swift-icon.svg"
+  icon_large: "./assets/swift-icon.svg"
+  brand_color: "#F05138"
+  default_prompt: "Use $jww-swift-style to implement this Swift change."

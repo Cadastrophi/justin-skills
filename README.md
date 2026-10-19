@@ -125,6 +125,7 @@ scripts deduplicate their union.
 | `slides` | PowerPoint plus selected design guidance. |
 | `legal` | Privacy-policy drafting and structured legal-risk assessment. |
 | `security` | Cloudflare's security audit and vulnerability review workflow. |
+| `jww` | Complete `justin/jww-skills` collection: investigation, git, handoff, validation, Swift, and writing conventions. |
 | `personal-workflows` | Locally curated documentation, discovery, and implementation helpers. |
 | `all` | Every skill; expect a crowded `/skills` list. |
 
@@ -180,3 +181,7 @@ Run `.\start.ps1 writing` or `./start.sh writing` to sync Humanizer and Pstack u
 ## Security pack
 
 Run `.\start.ps1 security` or `./start.sh security` to sync Cloudflare's `security-audit` skill. It gives focused security guidance by default and runs its full six-phase audit, with report files, only when you ask for a complete audit or pen test.
+
+## JWW pack
+
+Run `.\start.ps1 jww` or `./start.sh jww` to sync the six `jww-*` skills from Justin Williams: bounded investigation, git workflow, handoff, repository validation, Swift style, and writing style.

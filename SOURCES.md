@@ -51,3 +51,7 @@ Imported unchanged into the `legal` pack. These are drafting/review aids, not le
 ## Security imports
 
 - `security-audit`: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill/tree/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/skills/security-audit), revision `c1c8a8c1471069fb0e188eeaff69b8e8db6564a8`. Imported unchanged with its reference files and validators. MIT, `licenses/cloudflare-security-audit-skill-LICENSE`.
+
+## JWW imports
+
+- `jww-bounded-investigation`, `jww-git-workflow`, `jww-handoff`, `jww-repository-validation`, `jww-swift-style`, `jww-writing-style`: [justin/jww-skills](https://github.com/justin/jww-skills/tree/b4af06df942ed9fa61c950b4e9e47217f92c4f88/skills), revision `b4af06df942ed9fa61c950b4e9e47217f92c4f88`. Imported unchanged. MIT, `licenses/jww-skills-LICENSE`.

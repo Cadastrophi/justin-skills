@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Workflow"
+  short_description: "Apply safe Git and PR workflows"
+  default_prompt: "Use $jww-git-workflow to prepare this repository change for review."
