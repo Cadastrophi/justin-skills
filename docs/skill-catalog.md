@@ -17,20 +17,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `awesome-design-md` | Justin repo: design, slides; Project pack | A vendored copy of VoltAgent/awesome-design-md — 70+ brand and product design systems captured as…. Use when you need a real-world reference for a brand's typography, palette, motion, spacing, or voice; when the user names a…. |
 | `brandkit` | Justin repo: design, slides; Project pack | Use for premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. |
 | `capture-intent-docs` | Justin repo: personal-workflows; Project pack | Capture agreed product intent from a conversation in the repository's docs. Use when asked to document, record, save, or update the intended behavior of a page or feature. |
-| `cavecrew` | Justin repo: caveman-core; Project pack | Use when deciding whether to delegate code search, a small edit, or a diff review to a Caveman helper. |
-| `caveman` | Justin repo: starter, caveman-core; Global candidate | Use for ultra-compressed communication mode that cuts output tokens while keeping technical accuracy. |
-| `caveman-commit` | Justin repo: caveman-core; Project pack | Write a Conventional Commits message compressed to intent only. |
-| `caveman-compress` | Justin repo: caveman-core; Project pack | Use for compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup. |
-| `caveman-discover` | Justin repo: caveman-cloud; Project pack | Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. |
-| `caveman-evidence-review` | Justin repo: caveman-cloud; Project pack | Read-only review of Caveman Cloud evidence: cost. Use when asked what Caveman found or where LLM spend goes. |
-| `caveman-explore` | Justin repo: caveman-cloud; Project pack | Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed. |
-| `caveman-help` | Justin repo: caveman-core; Project pack | Use for quick-reference card for caveman modes, skills and commands. |
-| `caveman-learn` | Justin repo: caveman-cloud; Project pack | Act on a Caveman learn report - review the ranked token sinks. Use when asked to lower an agent's token cost, what caveman has saved, to trim a heavy CLAUDE. |
-| `caveman-manage` | Justin repo: caveman-cloud; Project pack | Inspect Caveman Cloud's experiment lifecycle and block unsafe execution. Use when asked to start, approve, cancel, promote or roll back a Caveman experiment. |
-| `caveman-optimize` | Justin repo: caveman-cloud; Project pack | Turn a Caveman optimization observation into an operator-chosen candidate with a paired baseline…. Use when asked to inspect or evaluate a Caveman optimization report. |
-| `caveman-review` | Justin repo: caveman-core; Project pack | Use for compressed code review - one line per finding with location, problem and fix. |
-| `caveman-setup` | Justin repo: caveman-cloud; Project pack | Wire a repository through the Caveman Cloud gateway so every LLM request is measured, with no behavior change. |
-| `caveman-stats` | Justin repo: caveman-core; Project pack | Show real token usage and estimated savings for the current session, read from the session log. |
 | `claude-handoff` | Justin repo: matt-experimental; Project pack | Hand the current conversation off to a fresh background agent that picks up the work immediately. |
 | `code-review` | Justin repo: matt-engineering; Project pack | Review the changes since a fixed point (commit. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\". |
 | `codebase-design` | Justin repo: matt-engineering; Project pack | Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes,…. |

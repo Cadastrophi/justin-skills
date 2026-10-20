@@ -5,7 +5,7 @@
     "starter": {
       "title": "Starter / routers",
       "summary": "A small global set of standalone helpers that does not depend on specialist packs.",
-      "skills": ["caveman", "find-skills", "grill-me", "handoff", "wait-what"]
+      "skills": ["find-skills", "grill-me", "handoff", "wait-what"]
     },
     "emil": {
       "title": "Emil Kowalski",
@@ -70,41 +70,12 @@
         "writing-fragments", "writing-shape"
       ]
     },
-    "caveman-core": {
-      "title": "Caveman: concise workflows",
-      "summary": "Communication, help, review, commit, compression, and delegation helpers.",
-      "skills": [
-        "cavecrew", "caveman", "caveman-commit", "caveman-compress",
-        "caveman-help", "caveman-review", "caveman-stats"
-      ]
-    },
-    "caveman-cloud": {
-      "title": "Caveman Cloud",
-      "summary": "Gateway setup, evidence review, discovery, optimization, and experiment operations.",
-      "skills": [
-        "caveman-discover", "caveman-evidence-review", "caveman-explore",
-        "caveman-learn", "caveman-manage", "caveman-optimize",
-        "caveman-setup"
-      ]
-    },
     "code-discipline": {
       "title": "Focused code-change discipline",
-      "summary": "Generic Caveman work patterns for diagnosis, small builds, migrations, refactors, and verification.",
+      "summary": "Generic work patterns for diagnosis, small builds, migrations, refactors, and verification.",
       "skills": [
         "investigate-first", "lean-build", "migration", "safe-refactor",
         "surgical-patch", "verify-and-stop"
-      ]
-    },
-    "caveman-all": {
-      "title": "Caveman: complete",
-      "summary": "Every skill from JuliusBrussee/caveman.",
-      "skills": [
-        "cavecrew", "caveman", "caveman-commit", "caveman-compress",
-        "caveman-discover", "caveman-evidence-review", "caveman-explore",
-        "caveman-help", "caveman-learn", "caveman-manage",
-        "caveman-optimize", "caveman-review", "caveman-setup",
-        "caveman-stats", "investigate-first", "lean-build", "migration",
-        "safe-refactor", "surgical-patch", "verify-and-stop"
       ]
     },
     "design": {

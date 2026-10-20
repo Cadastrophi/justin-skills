@@ -8,7 +8,7 @@ stability boundaries without requiring every skill to be installed.
 | --- | --- | --- |
 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | `2d228630ba1446365f614a108cb8252f1feda202` | `emil` |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | `5beb35b040e3de97e54fa9e386d7e42d15c295c2` | `matt` |
-| [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | `15581d14007fd01fb3f132016741962f34936ca2` | `caveman-all` |
+| [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | `15581d14007fd01fb3f132016741962f34936ca2` | `code-discipline` |
 
 ## Collision policy
 

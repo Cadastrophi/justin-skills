@@ -64,20 +64,6 @@ bun-runtime,ECC plugin,On demand / project,"Use for bun as runtime, package mana
 canary-watch,ECC plugin,On demand / project,"Use this skill to monitor and verify a deployed URL after releases — checks HTTP endpoints, SSE streams, static assets, console errors, and performance regressions after…."
 capture-intent-docs,Justin repo: personal-workflows,Project pack,"Capture agreed product intent from a conversation in the repository's docs. Use when asked to document, record, save, or update the intended behavior of a page or feature."
 carrier-relationship-management,ECC plugin,On demand / project,"Manage truckload. Use when onboarding carriers, running freight RFPs, negotiating rates, evaluating carrier performance, reallocating freight,…."
-cavecrew,Justin repo: caveman-core,Project pack,"Use when deciding whether to delegate code search, a small edit, or a diff review to a Caveman helper."
-caveman,"Justin repo: starter, caveman-core",Global candidate,Use for ultra-compressed communication mode that cuts output tokens while keeping technical accuracy.
-caveman-commit,Justin repo: caveman-core,Project pack,Write a Conventional Commits message compressed to intent only.
-caveman-compress,Justin repo: caveman-core,Project pack,"Use for compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup."
-caveman-discover,Justin repo: caveman-cloud,Project pack,Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket.
-caveman-evidence-review,Justin repo: caveman-cloud,Project pack,Read-only review of Caveman Cloud evidence: cost. Use when asked what Caveman found or where LLM spend goes.
-caveman-explore,Justin repo: caveman-cloud,Project pack,"Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed."
-caveman-help,Justin repo: caveman-core,Project pack,"Use for quick-reference card for caveman modes, skills and commands."
-caveman-learn,Justin repo: caveman-cloud,Project pack,"Act on a Caveman learn report - review the ranked token sinks. Use when asked to lower an agent's token cost, what caveman has saved, to trim a heavy CLAUDE."
-caveman-manage,Justin repo: caveman-cloud,Project pack,"Inspect Caveman Cloud's experiment lifecycle and block unsafe execution. Use when asked to start, approve, cancel, promote or roll back a Caveman experiment."
-caveman-optimize,Justin repo: caveman-cloud,Project pack,Turn a Caveman optimization observation into an operator-chosen candidate with a paired baseline…. Use when asked to inspect or evaluate a Caveman optimization report.
-caveman-review,Justin repo: caveman-core,Project pack,"Use for compressed code review - one line per finding with location, problem and fix."
-caveman-setup,Justin repo: caveman-cloud,Project pack,"Wire a repository through the Caveman Cloud gateway so every LLM request is measured, with no behavior change."
-caveman-stats,Justin repo: caveman-core,Project pack,"Show real token usage and estimated savings for the current session, read from the session log."
 cisco-ios-patterns,ECC plugin,On demand / project,"Cisco IOS and IOS-XE review patterns for show commands. Use when reading, writing, or reviewing Cisco IOS / IOS-XE configuration or planning a change window."
 ck,ECC plugin,On demand / project,"Persistent per-project memory for Claude Code (Context Keeper) driven by deterministic Node.js /ck…. Use when context must survive across sessions, saving session state with next steps and decisions, resuming where a previous…."
 claude-devfleet,ECC plugin,On demand / project,Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects. Use when dispatching parallel coding agents across isolated worktrees and tracking their reports.

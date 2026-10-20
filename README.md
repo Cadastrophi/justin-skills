@@ -1,7 +1,7 @@
 # Justin Skills
 
 Personal agent skills, including a locally authored Justin Design skill, plus
-complete mirrored collections from Emil Kowalski, Matt Pocock, and Caveman.
+complete mirrored collections from Emil Kowalski and Matt Pocock.
 Install only the focused packs you need so `/skills` stays useful.
 
 ## Recommended setup
@@ -108,17 +108,14 @@ scripts deduplicate their union.
 
 | Pack | Scope |
 | --- | --- |
-| `starter` | Five global-friendly routers and concise-mode helpers. |
+| `starter` | Four global-friendly standalone helpers. |
 | `emil` | Complete `emilkowalski/skills` collection. |
 | `matt-engineering` | Stable engineering workflows from Matt Pocock. |
 | `matt-productivity` | Stable interview, handoff, teaching, and writing workflows. |
 | `matt-misc` | Stable setup and migration utilities. |
 | `matt-experimental` | Matt Pocock's in-progress skills, kept separate on purpose. |
 | `matt` | Complete Matt Pocock collection. |
-| `caveman-core` | Concise communication, review, commit, help, and compression. |
-| `caveman-cloud` | Caveman gateway, evidence, and optimization workflows. |
 | `code-discipline` | Generic focused-build, diagnosis, migration, refactor, and verification patterns. |
-| `caveman-all` | Complete Caveman collection. |
 | `design` | Personal visual design, frontend taste, and premium interface craft. |
 | `animation` | Focused motion design subset. |
 | `graphics` | Image-to-3D and procedural Three.js. |
