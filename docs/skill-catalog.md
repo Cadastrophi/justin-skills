@@ -2,9 +2,9 @@
 
 One row per distinct skill-folder name found in the Justin repository, user-level agent directories, and agent plugin or built-in caches on this computer. Same-named copies are listed once; the separate inventory records paths and content differences. Cached/built-in skills may be available only in their owning tool, and should not be copied into the shared catalog automatically.
 
-**490 distinct names.** Configure the Justin repo's `starter` pack globally only if you want its five helpers everywhere; use specialist packs per project. ECC, Paseo, and bundled skills follow their own installer or host. The usage prompts below condense each skill's own description; inspect its `SKILL.md` before first configuration.
+**431 distinct names.** Configure the Justin repo's `starter` pack globally only if you want its five helpers everywhere; use specialist packs per project. ECC, Paseo, and bundled skills follow their own installer or host. The usage prompts below condense each skill's own description; inspect its `SKILL.md` before first configuration.
 
-## Justin repository (92)
+## Justin repository (91)
 
 | Skill | Source / configure | Use it when |
 | --- | --- | --- |
@@ -81,13 +81,12 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `wait-what` | Justin repo: starter, matt-productivity; Global candidate | Use for stop. |
 | `wayfinder` | Justin repo: matt-engineering; Project pack | Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the…. |
 | `wizard` | Justin repo: matt-engineering; Project pack | Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or…. |
-| `write-swift` | Justin repo: emil; Project pack | How to write modern Swift well — modeling with value types. Use when writing, reviewing, or migrating Swift, or when a concurrency error, a hang, a data race, a retain cycle, or a…. |
 | `writing-beats` | Justin repo: matt-experimental; Project pack | Use for writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it. |
 | `writing-for-agents` | Justin repo: matt-productivity; Project pack | Writing documents for agents. Use when creating or editing skills, or modifying AGENTS. |
 | `writing-fragments` | Justin repo: matt-experimental; Project pack | Use for writing, explore: mine raw fragments, no structure yet. |
 | `writing-shape` | Justin repo: matt-experimental; Project pack | Use for writing, exploit: shape raw material into an article, paragraph by paragraph. |
 
-## ECC collection (293)
+## ECC collection (241)
 
 | Skill | Source / configure | Use it when |
 | --- | --- | --- |
@@ -103,7 +102,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `agentic-os` | ECC plugin; On demand / project | Build persistent multi-agent operating systems on Claude Code. Use when building a persistent multi-agent system on Claude Code with its own memory, commands, and scheduling. |
 | `ai-first-engineering` | ECC plugin; On demand / project | Engineering operating model for teams where AI agents generate a large share of implementation output. Use when setting team process, review gates, or ownership rules for a codebase largely written by agents. |
 | `ai-regression-testing` | ECC plugin; On demand / project | Regression testing strategies for AI-assisted development. Use when adding regression coverage to AI-assisted code, or when the same model both wrote and reviewed a change. |
-| `android-clean-architecture` | ECC plugin; On demand / project | Clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure. Use when structuring modules, layers, or data flow in an Android or KMP project. |
 | `angular-developer` | ECC plugin; On demand / project | Use for generates Angular code and provides architectural guidance. |
 | `api-connector-builder` | ECC plugin; On demand / project | Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture. |
 | `api-design` | ECC plugin; On demand / project | REST API design patterns including resource naming. Use when designing or reviewing REST endpoints, resource names, status codes, pagination, or versioning. |
@@ -135,7 +133,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `coding-standards` | ECC plugin; On demand / project | Baseline cross-project coding conventions for naming. Use when reviewing code quality or naming with no framework-specific skill that applies. |
 | `competitive-platform-analysis` | ECC plugin; On demand / project | Use when scoping a competitive landscape — identifying, categorising, and score-filtering a competitor set before any benchmarking begins. |
 | `competitive-report-structure` | ECC plugin; On demand / project | Assemble scored competitor profile cards (from benchmark-methodology) into a decision-grade…. Use when presenting competitive findings to leadership or a board, writing a competitive landscape report, or as the final…. |
-| `compose-multiplatform-patterns` | ECC plugin; On demand / project | Compose Multiplatform and Jetpack Compose patterns for KMP projects — state management. Use when building Compose or Jetpack Compose UI, state, navigation, or theming in a KMP project. |
 | `config-gc` | ECC plugin; On demand / project | Garbage collection for your Claude Code configuration. Use when the user says "clean up my config", "config GC", "too many skills", "audit my setup", "my. |
 | `configure-ecc` | ECC plugin; On demand / project | Run the conversational ECC setup wizard inside the current harness: inventory the install. Use when installing, updating, reconfiguring, or repairing an ECC installation, changing hook profiles, or moving ECC between…. |
 | `connections-optimizer` | ECC plugin; On demand / project | Reorganize the user's X and LinkedIn network with review-first pruning. Use when the user wants to clean up following lists, grow toward current priorities, or rebalance a social graph around…. |
@@ -154,10 +151,8 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `cpp-coding-standards` | ECC plugin; On demand / project | C++ coding standards based on the C++ Core Guidelines (isocpp.github.io). Use when writing, reviewing, or refactoring C++ code to enforce modern, safe, and idiomatic practices. |
 | `cpp-testing` | ECC plugin; On demand / project | Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers. |
 | `crosspost` | ECC plugin; On demand / project | Multi-platform content distribution across X. Use when the user wants to distribute content across social platforms. |
-| `csharp-testing` | ECC plugin; On demand / project | C# and .NET testing patterns with xUnit. Use when writing or reviewing xUnit tests, mocks, or integration tests in a C# /. |
 | `customer-billing-ops` | ECC plugin; On demand / project | Operate customer billing workflows such as subscriptions. Use when the user needs to help a customer, inspect subscription state, or manage revenue-impacting billing operations. |
 | `customs-trade-compliance` | ECC plugin; On demand / project | Codified customs and trade compliance expertise — HS/HTS tariff classification with GRI rules. Use when classifying goods, preparing import/export documentation, screening restricted parties, responding to customs audits…. |
-| `dart-flutter-patterns` | ECC plugin; On demand / project | Production-ready Dart and Flutter patterns covering null safety. Use when writing or reviewing Dart and Flutter code — state, widgets, navigation, networking, or architecture. |
 | `dashboard-builder` | ECC plugin; On demand / project | Build monitoring dashboards that answer real operator questions for Grafana. Use when turning metrics into a working dashboard instead of a vanity board. |
 | `data-scraper-agent` | ECC plugin; On demand / project | Build a fully automated AI-powered data collection agent for any public source — job boards. Use when the user wants to monitor, collect, or track any public data automatically. |
 | `data-throughput-accelerator` | ECC plugin; On demand / project | Diagnose and accelerate large data movement — ingestion. Use when a pipeline or backfill is too slow and must get faster without losing data correctness. |
@@ -168,15 +163,9 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `deployment-patterns` | ECC plugin; On demand / project | Deployment workflows. Use when setting up CI/CD, containerizing an app, or checking production readiness before a release. |
 | `design-system` | ECC plugin; On demand / project | Generate a design system from an existing codebase or audit one for visual consistency: extract…. Use when starting a design system, auditing visual consistency before a redesign, or reviewing a PR that touches styling. |
 | `dev-team` | ECC plugin; On demand / project | Simulate a collaborative dev team session where multiple role-based personas (PM. Use when designing a feature, reviewing a proposal, or onboarding a new initiative and you want multi-role perspective without…. |
-| `django-celery` | ECC plugin; On demand / project | Django + Celery async task patterns — configuration. Use when adding background jobs, scheduled tasks, or async processing to a Django app. |
-| `django-patterns` | ECC plugin; On demand / project | Django architecture patterns. Use when building or reviewing Django apps, DRF APIs, ORM queries, or caching. |
-| `django-security` | ECC plugin; On demand / project | Django security best practices. Use when reviewing Django authentication, authorization, input handling, or deployment settings. |
-| `django-tdd` | ECC plugin; On demand / project | Django testing strategies with pytest-django. Use when writing Django or DRF tests with pytest-django, or driving a Django feature test-first. |
-| `django-verification` | ECC plugin; On demand / project | Run the full Django verification loop — environment check. Use when preparing a Django pull request, validating migrations or coverage, or running pre-deploy readiness checks. |
 | `dmux-workflows` | ECC plugin; On demand / project | Multi-agent orchestration using dmux (tmux pane manager for AI agents). Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows. |
 | `docker-patterns` | ECC plugin; On demand / project | Docker and Docker Compose patterns for local development. Use when creating or reviewing Dockerfiles and Compose services, testing installers across Linux distributions, or planning…. |
 | `documentation-lookup` | ECC plugin; On demand / project | Use up-to-date library and framework docs via Context7 MCP instead of training data. |
-| `dotnet-patterns` | ECC plugin; On demand / project | Idiomatic C# and .NET patterns. Use when writing or reviewing C# /. |
 | `dynamic-workflow-mode` | ECC plugin; On demand / project | Design task-local harnesses. Use when building a task-local harness, adding eval gates, or extracting a reusable skill from ad-hoc work. |
 | `e2e-testing` | ECC plugin; On demand / project | Playwright E2E testing patterns. Use when writing Playwright tests, structuring page objects, or fixing flaky E2E runs in CI. |
 | `ecc-guide` | ECC plugin; On demand / project | Answer questions about ECC by reading the live repo surface — agents. Use when the user asks what ECC includes, how to install or reset it, which skill or command fits a task, or how project…. |
@@ -191,23 +180,16 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `evm-token-decimals` | ECC plugin; On demand / project | Prevent silent decimal mismatch bugs across EVM chains. Use when handling token amounts across EVM chains, or when a balance, price, or transfer amount is off by orders of magnitude. |
 | `exa-search` | ECC plugin; On demand / project | Neural search via Exa MCP for web. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural…. |
 | `fal-ai-media` | ECC plugin; On demand / project | Unified media generation via fal.ai MCP — image. Use when the user wants to generate images, videos, or audio with AI. |
-| `fastapi-patterns` | ECC plugin; On demand / project | FastAPI best practices covering project structure. Use when building or reviewing FastAPI apps — Pydantic schemas, dependencies, async handlers, auth, or tests. |
 | `finance-billing-ops` | ECC plugin; On demand / project | Evidence-first revenue. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge diagnosis, or code-backed billing reality…. |
 | `flox-environments` | ECC plugin; On demand / project | Create reproducible. Use when setting up project toolchains, installing system-level dependencies (compilers, databases, native libs), pinning…. |
-| `flutter-dart-code-review` | ECC plugin; On demand / project | Library-agnostic Flutter/Dart code review checklist covering widget best practices. Use when reviewing Flutter or Dart code, whatever state management library the project uses. |
-| `foundation-models-on-device` | ECC plugin; On demand / project | Apple FoundationModels framework for on-device LLM — text generation. Use when adding on-device LLM features with Apple FoundationModels on iOS 26+. |
 | `frontend-a11y` | ECC plugin; On demand / project | Accessibility patterns for React and Next.js — semantic HTML. Use when building or reviewing forms, modals, dropdowns, tooltips, or tabs, fixing a11y lint or code-review findings, or…. |
 | `frontend-design-direction` | ECC plugin; On demand / project | Set an ECC-specific frontend design direction for production UI work. Use when building or improving websites, dashboards, applications, components, landing pages, visual tools, or any web UI that…. |
 | `frontend-patterns` | ECC plugin; On demand / project | Frontend development patterns for React. Use when building or reviewing React or Next. |
 | `frontend-slides` | ECC plugin; On demand / project | Create stunning. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. |
-| `fsharp-testing` | ECC plugin; On demand / project | F# testing patterns with xUnit. Use when writing F# tests with xUnit, FsUnit, Unquote, or FsCheck. |
 | `gan-style-harness` | ECC plugin; On demand / project | GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Use when a feature should be built autonomously through generator and evaluator iteration until it clears a quality bar. |
 | `gateguard` | ECC plugin; On demand / project | PreToolUse fact-forcing gate that denies the first Edit/Write/Bash (including MultiEdit) attempt…. Use when enabling or configuring the GateGuard hook, exempting paths via env vars, or handling first-touch denials. |
-| `generating-python-installer` | ECC plugin; On demand / project | Commercial-grade Python installer expert for Windows: Nuitka extreme compilation. Use when a Python app must ship as a minimal, fast-starting Windows installer; not for basic script-to-exe conversion. |
 | `git-workflow` | ECC plugin; On demand / project | Git workflow patterns including branching strategies. Use when choosing a branching strategy, writing commit conventions, cleaning up history before a pull request, deciding merge…. |
 | `github-ops` | ECC plugin; On demand / project | GitHub repository operations. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub…. |
-| `golang-patterns` | ECC plugin; On demand / project | Idiomatic Go patterns. Use when writing or reviewing Go code and idiomatic structure or conventions are in question. |
-| `golang-testing` | ECC plugin; On demand / project | Go testing patterns including table-driven tests. Use when writing Go tests — table-driven cases, subtests, benchmarks, fuzzing, or coverage. |
 | `google-workspace-ops` | ECC plugin; On demand / project | Operate across Google Drive. Use when the user needs to find, summarize, edit, migrate, or clean up Google Workspace assets without dropping to raw tool calls. |
 | `growth-log` | ECC plugin; On demand / project | Write growth log entries that extract reusable patterns from completed work — root cause. Use when capturing what was learned after a complex task, debugging session, failure, or rollback, when reviewing progress…. |
 | `healthcare-cdss-patterns` | ECC plugin; On demand / project | Clinical Decision Support System (CDSS) development patterns. Use when building clinical decision support — drug interaction checks, dose validation, clinical scoring, or alert severity. |
@@ -235,24 +217,11 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `ito-compute` | ECC plugin; On demand / project | Query live GPU inventory. Use when a user asks to find H100/H200 capacity, request a fixed compute rate, check Itô compute status, validate GPU nodes,…. |
 | `ito-inference` | ECC plugin; On demand / project | Inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. |
 | `ito-training` | ECC plugin; On demand / project | Inspect the availability of ML training on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed training manifest. |
-| `java-coding-standards` | ECC plugin; On demand / project | Java coding standards for Spring Boot and Quarkus services: naming. Use when writing or reviewing Java in a Spring Boot or Quarkus service. |
 | `jira-integration` | ECC plugin; On demand / project | Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. |
-| `jpa-patterns` | ECC plugin; On demand / project | JPA/Hibernate patterns for entity design. Use when designing JPA entities or relationships, or when a Hibernate query, transaction, or N+1 problem needs fixing. |
 | `knowledge-ops` | ECC plugin; On demand / project | Knowledge base management. Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems. |
-| `kotlin-coroutines-flows` | ECC plugin; On demand / project | Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency. Use when writing coroutines or Flow code on Android or KMP, or debugging cancellation and concurrency. |
-| `kotlin-exposed-patterns` | ECC plugin; On demand / project | JetBrains Exposed ORM patterns including DSL queries. Use when working with the Exposed ORM — DSL or DAO queries, transactions, pooling, or migrations. |
-| `kotlin-ktor-patterns` | ECC plugin; On demand / project | Ktor server patterns including routing DSL. Use when building a Ktor server — routing, plugins, auth, DI, serialization, or tests. |
-| `kotlin-patterns` | ECC plugin; On demand / project | Idiomatic Kotlin patterns. Use when writing or reviewing Kotlin code and idiomatic structure or null safety is in question. |
-| `kotlin-testing` | ECC plugin; On demand / project | Kotlin testing patterns with Kotest. Use when writing Kotlin tests with Kotest or MockK, or testing coroutines and checking coverage. |
 | `kubernetes-patterns` | ECC plugin; On demand / project | Kubernetes workload patterns. Use when writing or reviewing Kubernetes manifests, or debugging probes, RBAC, autoscaling, or resource limits. |
-| `laravel-patterns` | ECC plugin; On demand / project | Laravel architecture patterns. Use when building or reviewing Laravel apps — controllers, Eloquent, service layers, queues, or API resources. |
-| `laravel-plugin-discovery` | ECC plugin; On demand / project | Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility. |
-| `laravel-security` | ECC plugin; On demand / project | Laravel security best practices — authentication. Use when reviewing Laravel auth, Eloquent safety, CSRF, XSS, API security, or deployment configuration. |
-| `laravel-tdd` | ECC plugin; On demand / project | Laravel testing strategies with PHPUnit. Use when writing Laravel tests with PHPUnit or Pest, or driving a Laravel feature test-first. |
-| `laravel-verification` | ECC plugin; On demand / project | Verification loop for Laravel projects: env checks. Use when verifying a Laravel project before merge or deploy — lint, static analysis, tests, coverage, security. |
 | `latency-critical-systems` | ECC plugin; On demand / project | Optimize and verify latency-sensitive systems — realtime dashboards. Use when p95 latency, throughput, or data freshness matters. |
 | `lead-intelligence` | ECC plugin; On demand / project | AI-native lead intelligence and outreach pipeline. Use when the user wants to find, qualify, and reach high-value contacts. |
-| `liquid-glass-design` | ECC plugin; On demand / project | iOS 26 Liquid Glass design system — dynamic glass material with blur. Use when building iOS 26 Liquid Glass UI in SwiftUI, UIKit, or WidgetKit. |
 | `living-docs-governance` | ECC plugin; On demand / project | Use for keep a long-lived project's documentation from rotting by assigning existing project docs clear constitution, map, status, and history roles, then wiring the active agent…. |
 | `llm-trading-agent-security` | ECC plugin; On demand / project | Security patterns for autonomous trading agents with wallet or transaction authority. Use when an autonomous agent holds wallet or transaction authority and its limits, simulation, or key handling need review. |
 | `logistics-exception-management` | ECC plugin; On demand / project | Codified freight-exception handling expertise for shipment delays. Use when handling shipping exceptions, freight claims, delivery issues, or carrier disputes. |
@@ -292,9 +261,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `orch-pipeline` | ECC plugin; On demand / project | Use for shared orchestration engine behind the orch-* skill family — the gated Research-Plan-TDD-Review-Commit pipeline, size classifier, agent and command map, and two human gates…. |
 | `orch-refine-code` | ECC plugin; On demand / project | Orchestrate a behavior-preserving refactor — confirm tests are green. Use when the structure should improve but behavior must not change. |
 | `parallel-execution-optimizer` | ECC plugin; On demand / project | Speed up a task by turning it into a dependency graph of parallel lanes with a lane matrix. Use when the user wants a task done much faster through parallel work, concurrent agents, batched tool calls, isolated…. |
-| `perl-patterns` | ECC plugin; On demand / project | Modern Perl 5.36+ idioms. Use when writing or reviewing modern Perl 5. |
-| `perl-security` | ECC plugin; On demand / project | Comprehensive Perl security covering taint mode. Use when reviewing Perl input handling, process execution, DBI queries, or web-facing code. |
-| `perl-testing` | ECC plugin; On demand / project | Perl testing patterns using Test2::V0. Use when writing Perl tests with Test2::V0 or Test::More, or measuring coverage. |
 | `plan-canvas` | ECC plugin; On demand / project | Open plans and HTML artifacts in a local browser canvas where the human annotates elements. Use when presenting a plan for review, or when feedback like "move this, change that" is easier pointed at than typed. |
 | `plan-orchestrate` | ECC plugin; On demand / project | Read a plan document. Use when the user has a multi-step plan and wants to drive it through orchestrate without composing chains by hand. |
 | `plankton-code-quality` | ECC plugin; On demand / project | Write-time code quality enforcement using Plankton — auto-formatting. Use when setting up write-time formatting, linting, or auto-fix hooks on file edits. |
@@ -308,15 +274,7 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `production-scheduling` | ECC plugin; On demand / project | Codified expertise for production scheduling. Use when scheduling production, resolving bottlenecks, optimizing changeovers, responding to disruptions, or balancing…. |
 | `project-flow-ops` | ECC plugin; On demand / project | Operate execution flow across GitHub and Linear by triaging issues and pull requests. Use when the user wants backlog control, PR triage, or GitHub-to-Linear coordination. |
 | `prompt-optimizer` | ECC plugin; On demand / project | Analyze draft prompts. Use when the user says 'optimize prompt', 'improve my prompt', 'rewrite this prompt', 'help me prompt', 优化prompt, 改进prompt,…. |
-| `python-patterns` | ECC plugin; On demand / project | Pythonic idioms. Use when writing or reviewing Python code and idiomatic structure, typing, or PEP 8 is in question. |
-| `python-testing` | ECC plugin; On demand / project | Python testing strategies using pytest. Use when writing pytest tests — fixtures, mocks, parametrization, or coverage. |
-| `pytorch-patterns` | ECC plugin; On demand / project | PyTorch deep learning patterns and best practices for building robust. Use when writing or reviewing PyTorch training loops, model architectures, or data loading, or when a run will not reproduce. |
 | `quality-nonconformance` | ECC plugin; On demand / project | Quality control and non-conformance management for regulated manufacturing (FDA 21 CFR 820. Use when investigating non-conformances, performing root cause analysis, managing CAPAs, interpreting SPC data, or handling…. |
-| `quarkus-patterns` | ECC plugin; On demand / project | Quarkus 3.x LTS architecture patterns with Camel for messaging. Use when building or reviewing a Quarkus service, especially with Camel messaging or Panache data access. |
-| `quarkus-security` | ECC plugin; On demand / project | Quarkus security implementation patterns: JWT and OIDC authentication. Use when adding authentication or authorization, validating input, managing secrets, or hardening a Quarkus application. |
-| `quarkus-tdd` | ECC plugin; On demand / project | Test-driven development for Quarkus 3.x LTS using JUnit 5. Use when adding features, fixing bugs, or refactoring event-driven services. |
-| `quarkus-verification` | ECC plugin; On demand / project | Verification loop for Quarkus projects: build. Use when verifying a Quarkus service before a PR, after major refactoring or dependency upgrades, or pre-deploy. |
-| `rails-patterns` | ECC plugin; On demand / project | Ruby on Rails framework patterns for Rails 7.1+ and 8.x apps. Use when building or reviewing Rails apps, controllers, models, services, jobs, or views. |
 | `ralphinho-rfc-pipeline` | ECC plugin; On demand / project | Split an RFC into a multi-agent execution DAG — decompose into work units with dependencies and…. Use when a feature is too large for a single agent pass, orchestrating RFC-driven multi-agent execution, or managing merge…. |
 | `react-native-patterns` | ECC plugin; On demand / project | React Native and Expo app patterns — Expo Router navigation. Use when building or editing React Native / Expo screens, components, navigation, or data layers. |
 | `react-patterns` | ECC plugin; On demand / project | React 18/19 patterns including hooks discipline. Use when writing or reviewing React components. |
@@ -331,8 +289,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `research-ops` | ECC plugin; On demand / project | Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and any…. |
 | `returns-reverse-logistics` | ECC plugin; On demand / project | Codified expertise for returns authorization. Use when handling product returns, reverse logistics, refund decisions, return fraud detection, or warranty claims. |
 | `rules-distill` | ECC plugin; On demand / project | Scan skills to extract cross-cutting principles and distill them into rules — append. Use when the same principle keeps recurring across skills and belongs in a rule file instead. |
-| `rust-patterns` | ECC plugin; On demand / project | Idiomatic Rust patterns. Use when writing or reviewing Rust code and ownership, error handling, traits, or concurrency is in question. |
-| `rust-testing` | ECC plugin; On demand / project | Rust testing patterns including unit tests. Use when writing Rust tests — unit, integration, async, property-based, or coverage. |
 | `safety-guard` | ECC plugin; On demand / project | Guard against destructive operations with three modes: Careful intercepts dangerous commands (rm -rf. Use when working on production systems, running agents autonomously, restricting edits to a directory, or during migrations,…. |
 | `santa-method` | ECC plugin; On demand / project | Multi-agent adversarial verification: two independent reviewers with the same rubric must both pass…. Use when gating publishing, production deploys, compliance or brand-sensitive content, or hallucination-prone claims before…. |
 | `scientific-db-pubmed-database` | ECC plugin; On demand / project | Direct PubMed and NCBI E-utilities search workflows for biomedical literature. Use when a task needs biomedical literature from PubMed rather than general web search. |
@@ -350,15 +306,7 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `skill-stocktake` | ECC plugin; On demand / project | Use when auditing Claude skills and commands for quality. |
 | `social-graph-ranker` | ECC plugin; On demand / project | Weighted social-graph ranking for warm intro discovery. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow…. |
 | `social-publisher` | ECC plugin; On demand / project | Agent-driven scheduling and publishing of social media posts across 13 platforms via SocialClaw. Use when the user wants to publish to X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit,…. |
-| `springboot-patterns` | ECC plugin; On demand / project | Spring Boot architecture patterns. Use when building or reviewing a Spring Boot backend — REST layer, services, data access, caching, or async work. |
-| `springboot-security` | ECC plugin; On demand / project | Spring Security best practices for authn/authz. Use when reviewing Spring Security authn/authz, validation, CSRF, secrets, headers, or rate limiting. |
-| `springboot-tdd` | ECC plugin; On demand / project | Test-driven development for Spring Boot using JUnit 5. Use when adding features, fixing bugs, or refactoring. |
-| `springboot-verification` | ECC plugin; On demand / project | Run the full Spring Boot verification loop — Maven or Gradle build. Use when preparing a Spring Boot pull request, validating coverage thresholds, or running pre-deploy verification. |
 | `strategic-compact` | ECC plugin; On demand / project | Suggests manual context compaction at logical intervals to preserve context through task phases…. Use when a session is approaching a context limit and a task phase is a natural place to compact. |
-| `swift-actor-persistence` | ECC plugin; On demand / project | Thread-safe data persistence in Swift using actors — in-memory cache with file-backed storage. Use when persisting data in Swift and a data race or thread-safety problem needs designing out. |
-| `swift-concurrency-6-2` | ECC plugin; On demand / project | Swift 6.2 Approachable Concurrency — single-threaded by default. Use when adopting Swift 6. |
-| `swift-protocol-di-testing` | ECC plugin; On demand / project | Protocol-based dependency injection for testable Swift code — mock file system. Use when Swift code needs testing and file system, network, or external APIs must be mocked. |
-| `swiftui-patterns` | ECC plugin; On demand / project | SwiftUI architecture patterns. Use when building or reviewing SwiftUI views, @Observable state, navigation, or render performance. |
 | `taste` | ECC plugin; On demand / project | Creative-direction layer for music videos and short-form edits in the angelcore / cloud-trance /…. Use when a video must feel intentional rather than merely functional — music videos, fancams, moodboard-driven reels, or…. |
 | `taste-application` | ECC plugin; On demand / project | Generate new video against a distilled style pack and cut it into a finished piece - plan takes from…. Use when the user wants to make a video in a captured style, supplement existing footage, or assemble generated clips into a…. |
 | `taste-distillation` | ECC plugin; On demand / project | Measure a set of reference videos into a reusable style pack - colour grade as a 3D LUT. Use when the user wants to capture the look of reference footage, build a repeatable look, mint assets from references, or…. |
@@ -368,7 +316,6 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `team-builder` | ECC plugin; On demand / project | Interactive picker that discovers available agent personas via the claude agents command and agents/…. Use when composing a team of agents, browsing available agent personas, or running several specialist agents in parallel. |
 | `terminal-opener` | ECC plugin; On demand / project | Open an executable and its argument array in a visible terminal window through a reusable. Use when Codex needs to open an interactive CLI, SSH session, local development process, sandbox, or other argv-based command…. |
 | `terminal-ops` | ECC plugin; On demand / project | Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what…. |
-| `tinystruct-patterns` | ECC plugin; On demand / project | Expert guidance for developing with the tinystruct Java framework. Use when working on the tinystruct codebase or any project built on tinystruct — including creating Application classes,…. |
 | `token-budget-advisor` | ECC plugin; On demand / project | Offer a choice of response depth (25%/50%/75%/100%) with token estimates before answering. Use when the user asks to control response length or token budget, such as 'token budget', 'short version', 'brief answer',…. |
 | `ui-demo` | ECC plugin; On demand / project | Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. |
 | `ui-to-vue` | ECC plugin; On demand / project | Use when the user has UI screenshots or design exports that need batch conversion into Vue 3 components, especially with Vant, Element Plus, or Ant Design Vue. |
@@ -385,18 +332,12 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `workspace-surface-audit` | ECC plugin; On demand / project | Audit the active repo. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment. |
 | `x-api` | ECC plugin; On demand / project | X/Twitter API integration for posting tweets. Use when the user wants to interact with X programmatically. |
 
-## Other local installs (11)
+## Other local installs (5)
 
 | Skill | Source / configure | Use it when |
 | --- | --- | --- |
 | `coderabbit-review` | Other local; Platform or host | AI-powered. Use this skill when the user asks for a code review, pull request analysis, security audit, diff inspection, or comprehensive…. |
 | `gsd` | Other local; Platform or host | Spec-Driven Development (SDD) planning and execution framework. Use this skill when the user asks for structured project planning, roadmapping, multi-phase feature development, or wants to…. |
-| `paseo` | Other local; Platform or host | Use for paseo reference for managing projects, workspaces, workspace scripts, agents, schedules, and heartbeats. |
-| `paseo-advisor` | Other local; Platform or host | Spin up a single agent as an advisor — second opinion on the current task. Use when the user says "advisor", "second opinion", "what does X think", or wants an outside take without delegating the work…. |
-| `paseo-committee` | Other local; Platform or host | Form a committee of two high-reasoning agents to step back. Use when stuck, looping, tunnel-visioning, or facing a hard planning problem. |
-| `paseo-handoff` | Other local; Platform or host | Hand off the current task to another agent with full context. Use when the user says "handoff", "hand off", "hand this to", or wants to pass work to another agent. |
-| `paseo-help` | Other local; Platform or host | Answer questions about the Paseo product and app. Use when a user inside Paseo asks how Paseo works, how to configure it, or why something is broken; use the paseo skill…. |
-| `paseo-plugin` | Other local; Platform or host | Build and manage trusted local Paseo plugins. Use when the user asks to create, edit, install, reload, enable, disable, remove, or troubleshoot a Paseo plugin; add…. |
 | `pr` | Other local; Platform or host | Use when writing a PR body. |
 | `ralph-loop` | Other local; Platform or host | Autonomous long-running agent execution loop based on the Ralph Wiggum continuous iteration pattern. Use this skill when the user asks for unattended, persistent task execution, overnight coding runs, automated test-driven…. |
 | `roo-mode-orchestrator` | Other local; Platform or host | Multi-model role-based coding orchestrator inspired by Roo Code. Use this skill when the user asks to switch between specialized modes (Architect, Code, Debug, Ask, Review), requests…. |

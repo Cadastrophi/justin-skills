@@ -54,4 +54,4 @@ Imported unchanged into the `legal` pack. These are drafting/review aids, not le
 
 ## JWW imports
 
-- `jww-bounded-investigation`, `jww-git-workflow`, `jww-handoff`, `jww-repository-validation`, `jww-swift-style`, `jww-writing-style`: [justin/jww-skills](https://github.com/justin/jww-skills/tree/b4af06df942ed9fa61c950b4e9e47217f92c4f88/skills), revision `b4af06df942ed9fa61c950b4e9e47217f92c4f88`. Imported unchanged. MIT, `licenses/jww-skills-LICENSE`.
+- `jww-bounded-investigation`, `jww-git-workflow`, `jww-handoff`, `jww-repository-validation`, `jww-writing-style`: [justin/jww-skills](https://github.com/justin/jww-skills/tree/b4af06df942ed9fa61c950b4e9e47217f92c4f88/skills), revision `b4af06df942ed9fa61c950b4e9e47217f92c4f88`. Imported unchanged. MIT, `licenses/jww-skills-LICENSE`.

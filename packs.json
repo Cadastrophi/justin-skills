@@ -14,7 +14,7 @@
         "animate", "animate-expo", "animation-vocabulary", "apple-design",
         "ask-sonner", "emil-design-eng", "emil-ui-prototype",
         "find-animation-opportunities", "improve-animations", "pick-ui-library",
-        "review-animations", "write-swift"
+        "review-animations"
       ]
     },
     "matt-engineering": {
@@ -134,10 +134,10 @@
     },
     "jww": {
       "title": "Justin Williams",
-      "summary": "Investigation, git workflow, handoff, validation, Swift style, and writing conventions from justin/jww-skills.",
+      "summary": "Investigation, git workflow, handoff, validation, and writing conventions from justin/jww-skills.",
       "skills": [
         "jww-bounded-investigation", "jww-git-workflow", "jww-handoff",
-        "jww-repository-validation", "jww-swift-style", "jww-writing-style"
+        "jww-repository-validation", "jww-writing-style"
       ]
     },
     "all": {
