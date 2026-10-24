@@ -8,6 +8,7 @@ stability boundaries without requiring every skill to be installed.
 | --- | --- | --- |
 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | `2d228630ba1446365f614a108cb8252f1feda202` | `emil` |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | `5beb35b040e3de97e54fa9e386d7e42d15c295c2` | `matt` |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | `e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b` | `marketing` |
 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | `15581d14007fd01fb3f132016741962f34936ca2` | `code-discipline` |
 
 ## Collision policy
@@ -21,13 +22,15 @@ stability boundaries without requiring every skill to be installed.
   `design-taste-frontend` skill remains.
 - Legacy folder names were renamed to match each skill's declared YAML name.
 
+- All 52 `marketingskills` folders were imported unchanged with their `evals/`, `references/`, `assets/` and `scripts/` files, under the upstream folder names. None collided with an existing skill. The MIT licence is in `licenses/coreyhaines31-marketingskills-LICENSE`. Found through the [skills.marketing](https://skills.marketing/) directory, which indexes this collection among many re-uploads of it.
+
 Upstream licenses are preserved in `licenses/`.
 
 ## Other retained sources
 
 - `justin-design`: [Cadastrophi/justin-design-skill](https://github.com/Cadastrophi/justin-design-skill), revision `76cee9dd85e4dae277f1085827018d43bc69cf26`; copied with its `agents/openai.yaml` and `references/prompts.md` files. The imported revision has no license file.
 - `find-skills`: [vercel-labs/skills](https://github.com/vercel-labs/skills)
-- `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable/tree/46b822f7dda9f7dba799a9c7776fdc19b3a93559/.agents/skills/impeccable), revision `46b822f7dda9f7dba799a9c7776fdc19b3a93559` (v4.7.0), copied from the `.agents/skills/impeccable` build
+- `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable/tree/936867543ac2576920d663cc9803597f6044f3ac/.agents/skills/impeccable), revision `936867543ac2576920d663cc9803597f6044f3ac` (v4.7.1), copied from the `.agents/skills/impeccable` build
 - `pptx`: [anthropics/skills](https://github.com/anthropics/skills)
 - `junior-dev`: [Cadastrophi/junior-dev](https://github.com/Cadastrophi/junior-dev), revision `28f483be150594701e73232651cf604291e55b53`
 - `capture-intent-docs`: Vellum's `.agents/skills/capture-intent-docs`, revision `9ceed7a`

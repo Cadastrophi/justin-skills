@@ -140,6 +140,26 @@
         "jww-repository-validation", "jww-writing-style"
       ]
     },
+    "marketing": {
+      "title": "Marketing",
+      "summary": "Complete coreyhaines31/marketingskills collection: positioning, launch, CRO, SEO, ads, email, referrals, and growth workflows.",
+      "skills": [
+        "ab-testing", "ad-creative", "ads", "ai-seo", "analytics", "aso",
+        "attribution", "churn-prevention", "co-marketing", "cold-email",
+        "community-marketing", "competitor-profiling", "competitors",
+        "content-strategy", "conversion-tracking", "copy-editing",
+        "copywriting", "cro", "customer-research",
+        "directory-submissions", "emails", "events", "free-tools",
+        "image", "influencer-marketing", "launch", "lead-magnets",
+        "link-building", "marketing-council", "marketing-ideas",
+        "marketing-loops", "marketing-plan", "marketing-psychology",
+        "offers", "onboarding", "paywalls", "popups", "pricing",
+        "product-marketing", "programmatic-seo", "prospecting",
+        "public-relations", "referrals", "revops", "sales-enablement",
+        "schema", "seo-audit", "signup", "site-architecture", "sms",
+        "social", "video"
+      ]
+    },
     "all": {
       "title": "Everything",
       "summary": "Every top-level skill in this repository. Expect a crowded /skills list.",

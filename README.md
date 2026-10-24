@@ -124,6 +124,7 @@ scripts deduplicate their union.
 | `security` | Cloudflare's security audit and vulnerability review workflow. |
 | `jww` | Complete `justin/jww-skills` collection: investigation, git, handoff, validation, and writing conventions. |
 | `personal-workflows` | Locally curated documentation, discovery, and implementation helpers. |
+| `marketing` | Complete `coreyhaines31/marketingskills` collection (52 skills). |
 | `all` | Every skill; expect a crowded `/skills` list. |
 
 ### Install a pack
@@ -166,7 +167,7 @@ project settings, create branches, or configure Matt Pocock's skills. Run
 
 ## Sources
 
-The three complete imported collections and their pinned revisions are listed
+The complete imported collections and their pinned revisions are listed
 in [`SOURCES.md`](SOURCES.md). Other retained skills preserve the original
 sources previously documented by this repository, including Vercel Labs,
 Impeccable, Anthropic, and local project-specific skills.
@@ -182,3 +183,7 @@ Run `.\start.ps1 security` or `./start.sh security` to sync Cloudflare's `securi
 ## JWW pack
 
 Run `.\start.ps1 jww` or `./start.sh jww` to sync the five `jww-*` skills from Justin Williams: bounded investigation, git workflow, handoff, repository validation, and writing style.
+
+## Marketing pack
+
+Run `.\start.ps1 marketing` or `./start.sh marketing` to sync all 52 skills from Corey Haines's `marketingskills`: positioning, launch, CRO, SEO, ads, email, referrals, pricing, and growth loops. That is a large set, so for one project prefer installing a few by name, for example `npx skills add Cadastrophi/justin-skills --skill product-marketing launch cro referrals`. Most skills read a `product-marketing` context document first, so run `/product-marketing` once per product. `conversion-tracking` ships browser snippets and recipe scripts for Google Tag Manager; installing it does not run them.
