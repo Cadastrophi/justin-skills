@@ -29,6 +29,7 @@ Upstream licenses are preserved in `licenses/`.
 ## Other retained sources
 
 - `justin-design`: [Cadastrophi/justin-design-skill](https://github.com/Cadastrophi/justin-design-skill), revision `76cee9dd85e4dae277f1085827018d43bc69cf26`; copied with its `agents/openai.yaml` and `references/prompts.md` files. The imported revision has no license file.
+- `design-taste-frontend`: [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill), `skills/taste-skill` at revision `12af471f627f866411b4bd785b19646d3672784c` (tasteskill v2.1.5), copied unchanged with its `assets/`, `evals/`, `library/`, `references/` and `scripts/` files. License: `LICENSE-taste-skill.txt` (identical upstream).
 - `find-skills`: [vercel-labs/skills](https://github.com/vercel-labs/skills)
 - `impeccable`: [pbakaus/impeccable](https://github.com/pbakaus/impeccable/tree/936867543ac2576920d663cc9803597f6044f3ac/.agents/skills/impeccable), revision `936867543ac2576920d663cc9803597f6044f3ac` (v4.7.1), copied from the `.agents/skills/impeccable` build
 - `pptx`: [anthropics/skills](https://github.com/anthropics/skills)

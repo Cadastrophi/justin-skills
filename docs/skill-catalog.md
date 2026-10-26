@@ -20,7 +20,7 @@ One row per distinct skill-folder name found in the Justin repository, user-leve
 | `claude-handoff` | Justin repo: matt-experimental; Project pack | Hand the current conversation off to a fresh background agent that picks up the work immediately. |
 | `code-review` | Justin repo: matt-engineering; Project pack | Review the changes since a fixed point (commit. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\". |
 | `codebase-design` | Justin repo: matt-engineering; Project pack | Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes,…. |
-| `design-taste-frontend` | Justin repo: design, slides; Project pack | Use for anti-slop frontend skill for landing pages, portfolios, and redesigns. |
+| `design-taste-frontend` | Justin repo: design, slides; Project pack | Use for art direction on landing pages and marketing sites: researched directions, a no-slop house style, and a browser look-and-fix loop (tasteskill v2). |
 | `diagnosing-bugs` | Justin repo: matt-engineering; Project pack | Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow. |
 | `domain-modeling` | Justin repo: matt-engineering; Project pack | Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT. |
 | `emil-design-eng` | Justin repo: emil, slides; Project pack | Use when polishing UI components, motion, and interaction details using Emil Kowalski's design approach. |
